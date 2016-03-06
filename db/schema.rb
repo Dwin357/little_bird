@@ -11,16 +11,58 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160304235910) do
+ActiveRecord::Schema.define(version: 20160306032925) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "likes", force: :cascade do |t|
+    t.integer  "liked_id"
+    t.integer  "liker_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.integer  "author_id"
+    t.text     "post"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "posts_users", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "post_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "posts_users", ["post_id"], name: "index_posts_users_on_post_id", using: :btree
+  add_index "posts_users", ["user_id"], name: "index_posts_users_on_user_id", using: :btree
+
+  create_table "tags", force: :cascade do |t|
+    t.string   "tag"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tags_posts", force: :cascade do |t|
+    t.integer  "tag_id"
+    t.integer  "post_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "tags_posts", ["post_id"], name: "index_tags_posts_on_post_id", using: :btree
+  add_index "tags_posts", ["tag_id"], name: "index_tags_posts_on_tag_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "username"
     t.string   "password_hash"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.string   "status"
+    t.integer  "updated_by"
   end
 
 end

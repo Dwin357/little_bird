@@ -1,13 +1,19 @@
 == README
 LittleBird is a micro-blog, developed as a hobby/demonstration project by Edwin Steinmetz
 
-User Stories
+Workflow
+put your name next to a user story to claim it
+when working on a story, create a feature branch, and make a pull request when done
+any pull request should be tested
+
+
+User Stories (put your name next to the story to claim it)
 
 As a user I can sign up for a new account
 As a user I can sign in to an existing account
 As a user I can change my password to a new one by entering old pw
 As a user I can 'forget my password'
-  -> have it be reset to a one-time use temp pw that is emailed to me
+(have it be reset to a one-time use temp pw that is emailed to user)
 
 As a user I can follow other users
 As a user I can un-follow other users
