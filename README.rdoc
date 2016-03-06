@@ -1,0 +1,26 @@
+== README
+LittleBird is a micro-blog, developed as a hobby/demonstration project by Edwin Steinmetz
+
+User Stories
+
+As a user I can sign up for a new account
+As a user I can sign in to an existing account
+As a user I can change my password to a new one by entering old pw
+As a user I can 'forget my password'
+  -> have it be reset to a one-time use temp pw that is emailed to me
+
+As a user I can follow other users
+As a user I can un-follow other users
+As a user I can block a user from following me
+
+As a user I can see posts on my home page (mine+following)
+As a user I can create a new post
+As a user I can re-post a post
+As a user I can like a post
+
+As a user I can visit followed user's pages and see their streams
+
+As a user I can add tags to a post by including "#tags" in the text
+
+As a user I can search for posts
+As a user I can search for users
