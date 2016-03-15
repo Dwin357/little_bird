@@ -1166,3 +1166,42 @@ Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8b
 
 
 Started GET "/assets/_assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for 127.0.0.1 at 2016-03-11 22:29:33 -0600
+  [1m[36mUser Load (71.6ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (22.5ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1 OFFSET 1
+  [1m[36mFollowing Load (21.3ms)[0m  [1mSELECT "followings".* FROM "followings" WHERE "followings"."follower_id" = $1[0m  [["follower_id", 5]]
+  [1m[35m (1.0ms)[0m  BEGIN
+  [1m[36m (1.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (1.1ms)[0m  BEGIN
+  [1m[36mSQL (27.1ms)[0m  [1mINSERT INTO "followings" ("follower_id", "followed_id") VALUES ($1, $2) RETURNING "id"[0m  [["follower_id", 5], ["followed_id", 4]]
+  [1m[35m (35.5ms)[0m  COMMIT
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."followed_id" WHERE "followings"."follower_id" = $1[0m  [["follower_id", 5]]
+  [1m[35m (1.0ms)[0m  BEGIN
+  [1m[36mSQL (1.8ms)[0m  [1mUPDATE "followings" SET "blocked" = $1 WHERE "followings"."id" = $2[0m  [["blocked", "t"], ["id", 3]]
+  [1m[35m (20.5ms)[0m  COMMIT
+  [1m[36mFollowing Load (1.9ms)[0m  [1mSELECT "followings".* FROM "followings" WHERE "followings"."follower_id" = $1 AND "followings"."blocked" = $2[0m  [["follower_id", 5], ["blocked", "f"]]
+  [1m[36mUser Load (2.1ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[36mUser Load (1.8ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[36mFollowing Load (2.3ms)[0m  [1mSELECT  "followings".* FROM "followings"  ORDER BY "followings"."id" ASC LIMIT 1[0m
+  [1m[36mFollowing Load (1.6ms)[0m  [1mSELECT "followings".* FROM "followings"[0m
+  [1m[35mFollowing Load (2.0ms)[0m  SELECT "followings".* FROM "followings" WHERE "followings"."blocked" = $1  [["blocked", "f"]]
+  [1m[36mUser Load (3.4ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (1.5ms)[0m  SELECT "users".* FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."followed_id" WHERE "followings"."follower_id" = $1  [["follower_id", 4]]
+  [1m[36mFollowing Load (2.5ms)[0m  [1mSELECT  "followings".* FROM "followings"  ORDER BY "followings"."id" DESC LIMIT 1[0m
+  [1m[35mFollowing Load (2.3ms)[0m  SELECT  "followings".* FROM "followings"  ORDER BY "followings"."id" DESC LIMIT 1
+  [1m[36m (1.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.9ms)[0m  UPDATE "followings" SET "blocked" = $1 WHERE "followings"."id" = $2  [["blocked", "f"], ["id", 3]]
+  [1m[36m (13.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (2.4ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1 OFFSET 1
+  [1m[36mUser Load (3.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."followed_id" WHERE "followings"."follower_id" = $1[0m  [["follower_id", 5]]
+  [1m[35mUser Load (2.7ms)[0m  SELECT "users".* FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."follower_id" WHERE "followings"."followed_id" = $1  [["followed_id", 5]]
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.8ms)[0m  UPDATE "followings" SET "blocked" = $1 WHERE "followings"."id" = $2  [["blocked", "t"], ["id", 3]]
+  [1m[36m (14.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (3.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."follower_id" WHERE "followings"."followed_id" = $1  [["followed_id", 4]]
+  [1m[36mFollowing Load (1.9ms)[0m  [1mSELECT "followings".* FROM "followings" WHERE "followings"."followed_id" = $1[0m  [["followed_id", 4]]
+  [1m[35mFollowing Load (1.8ms)[0m  SELECT "followings".* FROM "followings" WHERE "followings"."followed_id" = $1 AND "followings"."blocked" = $2  [["followed_id", 4], ["blocked", "f"]]
+  [1m[36mFollowing Load (2.5ms)[0m  [1mSELECT "followings".* FROM "followings"[0m
+  [1m[36mUser Load (1.9ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mFollowing Load (2.7ms)[0m  SELECT "followings".* FROM "followings" WHERE "followings"."follower_id" = $1 AND "followings"."blocked" = $2  [["follower_id", 4], ["blocked", "f"]]
+  [1m[36mUser Load (2.1ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mFollowing Load (2.1ms)[0m  SELECT "followings".* FROM "followings" WHERE "followings"."follower_id" = $1 AND "followings"."blocked" = $2  [["follower_id", 4], ["blocked", "f"]]
