@@ -37,4 +37,5 @@ class User < ActiveRecord::Base
   def stream_posts
     self.followed.unshift(self).posts
   end
+  
 end
