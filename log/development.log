@@ -1,0 +1,1168 @@
+  [1m[36m (272.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (82.9ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (2.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20160304235910)
+  [1m[35m (1.0ms)[0m  BEGIN
+  [1m[36m (121.1ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "username" character varying, "password_has" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (2.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160304235910"]]
+  [1m[36m (24.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (1.8ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (23.0ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.9ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (63.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (68.7ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (2.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20160304235910)
+  [1m[35m (0.9ms)[0m  BEGIN
+  [1m[36m (135.0ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "username" character varying, "password_hash" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (2.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160304235910"]]
+  [1m[36m (12.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (1.7ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (18.0ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (31.6ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "user 0"], ["password_hash", "filler"], ["created_at", "2016-03-05 00:06:01.452810"], ["updated_at", "2016-03-05 00:06:01.452810"]]
+  [1m[36m (27.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "user 1"], ["password_hash", "filler"], ["created_at", "2016-03-05 00:06:01.522559"], ["updated_at", "2016-03-05 00:06:01.522559"]]
+  [1m[35m (4.8ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "user 2"], ["password_hash", "filler"], ["created_at", "2016-03-05 00:06:01.532337"], ["updated_at", "2016-03-05 00:06:01.532337"]]
+  [1m[36m (5.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "user 3"], ["password_hash", "filler"], ["created_at", "2016-03-05 00:06:01.543720"], ["updated_at", "2016-03-05 00:06:01.543720"]]
+  [1m[35m (5.2ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "user 4"], ["password_hash", "filler"], ["created_at", "2016-03-05 00:06:01.554901"], ["updated_at", "2016-03-05 00:06:01.554901"]]
+  [1m[36m (5.2ms)[0m  [1mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddUpdateStatsToUser (20160306032136)
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36m (22.4ms)[0m  [1mALTER TABLE "users" ADD "status" character varying[0m
+  [1m[35m (1.7ms)[0m  ALTER TABLE "users" ADD "updated_by" integer
+  [1m[36m (41.5ms)[0m  [1mALTER TABLE "users" ADD "updated_at" timestamps[0m
+PG::UndefinedObject: ERROR:  type "timestamps" does not exist
+LINE 1: ALTER TABLE "users" ADD "updated_at" timestamps
+                                             ^
+: ALTER TABLE "users" ADD "updated_at" timestamps
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddUpdateStatsToUser (20160306032136)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (1.2ms)[0m  [1mALTER TABLE "users" ADD "status" character varying[0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "users" ADD "updated_by" integer
+  [1m[36m (2.2ms)[0m  [1mALTER TABLE "users" ADD "updated_at" timestamp[0m
+PG::DuplicateColumn: ERROR:  column "updated_at" of relation "users" already exists
+: ALTER TABLE "users" ADD "updated_at" timestamp
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (55.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (72.5ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20160304235910)
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (120.5ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "username" character varying, "password_hash" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160304235910"]]
+  [1m[36m (28.2ms)[0m  [1mCOMMIT[0m
+Migrating to AddUpdateStatsToUser (20160306032136)
+  [1m[35m (0.7ms)[0m  BEGIN
+  [1m[36m (1.2ms)[0m  [1mALTER TABLE "users" ADD "status" character varying[0m
+  [1m[35m (1.3ms)[0m  ALTER TABLE "users" ADD "updated_by" integer
+  [1m[36m (3.2ms)[0m  [1mALTER TABLE "users" ADD "updated_at" timestamp[0m
+PG::DuplicateColumn: ERROR:  column "updated_at" of relation "users" already exists
+: ALTER TABLE "users" ADD "updated_at" timestamp
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36m (112.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (71.0ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20160304235910)
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36m (108.2ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "username" character varying, "password_hash" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160304235910"]]
+  [1m[36m (11.4ms)[0m  [1mCOMMIT[0m
+Migrating to AddUpdateStatsToUser (20160306032136)
+  [1m[35m (0.7ms)[0m  BEGIN
+  [1m[36m (1.3ms)[0m  [1mALTER TABLE "users" ADD "status" character varying[0m
+  [1m[35m (1.4ms)[0m  ALTER TABLE "users" ADD "updated_by" integer
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032136"]]
+  [1m[35m (7.7ms)[0m  COMMIT
+Migrating to CreatePosts (20160306032706)
+  [1m[36m (0.7ms)[0m  [1mBEGIN[0m
+  [1m[35m (104.9ms)[0m  CREATE TABLE "posts" ("id" serial primary key, "author_id" integer, "post" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032706"]]
+  [1m[35m (23.6ms)[0m  COMMIT
+Migrating to CreatePostings (20160306032743)
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (57.0ms)[0m  CREATE TABLE "postings" ("id" serial primary key, "poster_id" integer, "post_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032743"]]
+  [1m[35m (26.2ms)[0m  COMMIT
+Migrating to CreateLikes (20160306032818)
+  [1m[36m (0.7ms)[0m  [1mBEGIN[0m
+  [1m[35m (60.7ms)[0m  CREATE TABLE "likes" ("id" serial primary key, "liked_id" integer, "liker_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032818"]]
+  [1m[35m (16.8ms)[0m  COMMIT
+Migrating to CreateTags (20160306032907)
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35m (129.9ms)[0m  CREATE TABLE "tags" ("id" serial primary key, "tag" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032907"]]
+  [1m[35m (18.5ms)[0m  COMMIT
+Migrating to CreateTaggings (20160306032925)
+  [1m[36m (1.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (67.0ms)[0m  CREATE TABLE "taggings" ("id" serial primary key, "tag_id" integer, "tagged_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032925"]]
+  [1m[35m (21.4ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (9.6ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'likes'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (7.8ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'postings'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (8.0ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'posts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (7.6ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'taggings'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (7.4ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'tags'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (7.2ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (45.5ms)[0m  INSERT INTO "users" ("username", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["username", "first"], ["created_at", "2016-03-06 04:05:06.501717"], ["updated_at", "2016-03-06 04:05:06.501717"]]
+  [1m[36m (32.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mPost Load (2.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1  [["author_id", 1]]
+  [1m[36m (1.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (3.2ms)[0m  INSERT INTO "posts" ("post", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["post", "this is what I think"], ["created_at", "2016-03-06 04:06:13.576347"], ["updated_at", "2016-03-06 04:06:13.576347"]]
+  [1m[36m (11.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.9ms)[0m  BEGIN
+  [1m[36mSQL (1.9ms)[0m  [1mUPDATE "posts" SET "author_id" = $1, "updated_at" = $2 WHERE "posts"."id" = $3[0m  [["author_id", 1], ["updated_at", "2016-03-06 04:06:28.549949"], ["id", 1]]
+  [1m[35m (27.8ms)[0m  COMMIT
+  [1m[36mUser Load (2.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[36mUser Load (1.9ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mLike Load (2.0ms)[0m  SELECT "likes".* FROM "likes" WHERE "likes"."liker_id" = $1  [["liker_id", 1]]
+  [1m[36mPost Load (3.5ms)[0m  [1mSELECT  "posts".* FROM "posts"  ORDER BY "posts"."id" ASC LIMIT 1[0m
+  [1m[35mLike Load (1.7ms)[0m  SELECT "likes".* FROM "likes" WHERE "likes"."liked_id" = $1  [["liked_id", 1]]
+  [1m[36m (1.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (3.1ms)[0m  INSERT INTO "likes" ("liked_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["liked_id", 1], ["created_at", "2016-03-06 04:12:36.709301"], ["updated_at", "2016-03-06 04:12:36.709301"]]
+  [1m[36m (23.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (1.1ms)[0m  BEGIN
+  [1m[36mSQL (1.9ms)[0m  [1mUPDATE "likes" SET "liker_id" = $1, "updated_at" = $2 WHERE "likes"."id" = $3[0m  [["liker_id", 1], ["updated_at", "2016-03-06 04:12:50.884006"], ["id", 1]]
+  [1m[35m (8.7ms)[0m  COMMIT
+  [1m[36m (103.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (70.9ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (2.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20160304235910)
+  [1m[35m (0.9ms)[0m  BEGIN
+  [1m[36m (138.9ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "username" character varying, "password_hash" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (2.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160304235910"]]
+  [1m[36m (4.6ms)[0m  [1mCOMMIT[0m
+Migrating to AddUpdateStatsToUser (20160306032136)
+  [1m[35m (1.2ms)[0m  BEGIN
+  [1m[36m (2.6ms)[0m  [1mALTER TABLE "users" ADD "status" character varying[0m
+  [1m[35m (2.5ms)[0m  ALTER TABLE "users" ADD "updated_by" integer
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032136"]]
+  [1m[35m (14.4ms)[0m  COMMIT
+Migrating to CreatePosts (20160306032706)
+  [1m[36m (0.8ms)[0m  [1mBEGIN[0m
+  [1m[35m (128.2ms)[0m  CREATE TABLE "posts" ("id" serial primary key, "author_id" integer, "post" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032706"]]
+  [1m[35m (17.7ms)[0m  COMMIT
+Migrating to CreatePostings (20160306032743)
+  [1m[36m (50.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (60.6ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20160304235910)
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36m (97.3ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "username" character varying, "password_hash" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160304235910"]]
+  [1m[36m (23.2ms)[0m  [1mCOMMIT[0m
+Migrating to AddUpdateStatsToUser (20160306032136)
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (1.0ms)[0m  [1mALTER TABLE "users" ADD "status" character varying[0m
+  [1m[35m (1.8ms)[0m  ALTER TABLE "users" ADD "updated_by" integer
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032136"]]
+  [1m[35m (9.1ms)[0m  COMMIT
+Migrating to CreatePosts (20160306032706)
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35m (96.3ms)[0m  CREATE TABLE "posts" ("id" serial primary key, "author_id" integer, "post" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032706"]]
+  [1m[35m (17.0ms)[0m  COMMIT
+Migrating to CreatePostsUsersJoinTable (20160306032743)
+  [1m[36m (0.8ms)[0m  [1mBEGIN[0m
+  [1m[35m (50.3ms)[0m  CREATE TABLE "users_posts" ("id" serial primary key, "user_id" integer, "post_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (59.1ms)[0m  [1mCREATE  INDEX  "index_users_posts_on_user_id" ON "users_posts"  ("user_id")[0m
+  [1m[35m (49.1ms)[0m  CREATE  INDEX  "index_users_posts_on_post_id" ON "users_posts"  ("post_id")
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032743"]]
+  [1m[35m (17.0ms)[0m  COMMIT
+Migrating to CreateLikes (20160306032818)
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35m (53.2ms)[0m  CREATE TABLE "likes" ("id" serial primary key, "liked_id" integer, "liker_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032818"]]
+  [1m[35m (16.2ms)[0m  COMMIT
+Migrating to CreateTags (20160306032907)
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35m (119.4ms)[0m  CREATE TABLE "tags" ("id" serial primary key, "tag" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032907"]]
+  [1m[35m (32.8ms)[0m  COMMIT
+Migrating to CreateTaggings (20160306032925)
+  [1m[36m (1.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (83.4ms)[0m  CREATE TABLE "taggings" ("id" serial primary key, "tag_id" integer, "tagged_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032925"]]
+  [1m[35m (11.9ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (13.4ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'likes'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (11.0ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'posts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (10.4ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'taggings'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (9.4ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'tags'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (8.8ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (8.2ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users_posts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36m (107.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (71.2ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (2.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20160304235910)
+  [1m[35m (1.0ms)[0m  BEGIN
+  [1m[36m (169.5ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "username" character varying, "password_hash" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (2.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160304235910"]]
+  [1m[36m (27.0ms)[0m  [1mCOMMIT[0m
+Migrating to AddUpdateStatsToUser (20160306032136)
+  [1m[35m (1.3ms)[0m  BEGIN
+  [1m[36m (2.6ms)[0m  [1mALTER TABLE "users" ADD "status" character varying[0m
+  [1m[35m (2.9ms)[0m  ALTER TABLE "users" ADD "updated_by" integer
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032136"]]
+  [1m[35m (15.0ms)[0m  COMMIT
+Migrating to CreatePosts (20160306032706)
+  [1m[36m (0.7ms)[0m  [1mBEGIN[0m
+  [1m[35m (104.3ms)[0m  CREATE TABLE "posts" ("id" serial primary key, "author_id" integer, "post" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032706"]]
+  [1m[35m (23.7ms)[0m  COMMIT
+Migrating to CreatePostsUsersJoinTable (20160306032743)
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35m (74.5ms)[0m  CREATE TABLE "users_posts" ("id" serial primary key, "user_id" integer, "post_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (50.4ms)[0m  [1mCREATE  INDEX  "index_users_posts_on_user_id" ON "users_posts"  ("user_id")[0m
+  [1m[35m (46.3ms)[0m  CREATE  INDEX  "index_users_posts_on_post_id" ON "users_posts"  ("post_id")
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032743"]]
+  [1m[35m (20.4ms)[0m  COMMIT
+Migrating to CreateLikes (20160306032818)
+  [1m[36m (0.7ms)[0m  [1mBEGIN[0m
+  [1m[35m (107.7ms)[0m  CREATE TABLE "likes" ("id" serial primary key, "liked_id" integer, "liker_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032818"]]
+  [1m[35m (9.1ms)[0m  COMMIT
+Migrating to CreateTags (20160306032907)
+  [1m[36m (0.8ms)[0m  [1mBEGIN[0m
+  [1m[35m (109.1ms)[0m  CREATE TABLE "tags" ("id" serial primary key, "tag" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032907"]]
+  [1m[35m (16.8ms)[0m  COMMIT
+Migrating to CreateTagsPostsJoinTable (20160306032925)
+  [1m[36m (1.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (126.2ms)[0m  CREATE TABLE "tags_posts" ("id" serial primary key, "tag_id" integer, "post_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (50.6ms)[0m  [1mCREATE  INDEX  "index_tags_posts_on_tag_id" ON "tags_posts"  ("tag_id")[0m
+  [1m[35m (51.4ms)[0m  CREATE  INDEX  "index_tags_posts_on_post_id" ON "tags_posts"  ("post_id")
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032925"]]
+  [1m[35m (23.8ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (8.0ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'likes'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (6.7ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'posts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (7.0ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'tags'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (6.8ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'tags_posts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (6.6ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (6.2ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users_posts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36mUser Load (1.8ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (1.7ms)[0m  BEGIN
+  [1m[36mSQL (2.4ms)[0m  [1mINSERT INTO "posts" ("post", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["post", "my post"], ["created_at", "2016-03-06 05:30:45.442390"], ["updated_at", "2016-03-06 05:30:45.442390"]]
+  [1m[35m (6.6ms)[0m  COMMIT
+  [1m[36mLike Load (2.2ms)[0m  [1mSELECT "likes".* FROM "likes" WHERE "likes"."liked_id" = $1[0m  [["liked_id", 1]]
+PG::UndefinedTable: ERROR:  relation "posts_users" does not exist
+LINE 5:                WHERE a.attrelid = '"posts_users"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"posts_users"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+
+  [1m[36m (109.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (70.3ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20160304235910)
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36m (101.2ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "username" character varying, "password_hash" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160304235910"]]
+  [1m[36m (6.7ms)[0m  [1mCOMMIT[0m
+Migrating to AddUpdateStatsToUser (20160306032136)
+  [1m[35m (0.7ms)[0m  BEGIN
+  [1m[36m (1.2ms)[0m  [1mALTER TABLE "users" ADD "status" character varying[0m
+  [1m[35m (1.2ms)[0m  ALTER TABLE "users" ADD "updated_by" integer
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032136"]]
+  [1m[35m (8.7ms)[0m  COMMIT
+Migrating to CreatePosts (20160306032706)
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35m (99.7ms)[0m  CREATE TABLE "posts" ("id" serial primary key, "author_id" integer, "post" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032706"]]
+  [1m[35m (24.0ms)[0m  COMMIT
+Migrating to CreatePostsUsersJoinTable (20160306032743)
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35m (73.5ms)[0m  CREATE TABLE "posts_users" ("id" serial primary key, "user_id" integer, "post_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (53.5ms)[0m  [1mCREATE  INDEX  "index_posts_users_on_user_id" ON "posts_users"  ("user_id")[0m
+  [1m[35m (38.4ms)[0m  CREATE  INDEX  "index_posts_users_on_post_id" ON "posts_users"  ("post_id")
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032743"]]
+  [1m[35m (21.9ms)[0m  COMMIT
+Migrating to CreateLikes (20160306032818)
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35m (46.8ms)[0m  CREATE TABLE "likes" ("id" serial primary key, "liked_id" integer, "liker_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032818"]]
+  [1m[35m (24.6ms)[0m  COMMIT
+Migrating to CreateTags (20160306032907)
+  [1m[36m (0.8ms)[0m  [1mBEGIN[0m
+  [1m[35m (100.0ms)[0m  CREATE TABLE "tags" ("id" serial primary key, "tag" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032907"]]
+  [1m[35m (23.9ms)[0m  COMMIT
+Migrating to CreateTagsPostsJoinTable (20160306032925)
+  [1m[36m (0.7ms)[0m  [1mBEGIN[0m
+  [1m[35m (54.7ms)[0m  CREATE TABLE "tags_posts" ("id" serial primary key, "tag_id" integer, "post_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (69.8ms)[0m  [1mCREATE  INDEX  "index_tags_posts_on_tag_id" ON "tags_posts"  ("tag_id")[0m
+  [1m[35m (43.3ms)[0m  CREATE  INDEX  "index_tags_posts_on_post_id" ON "tags_posts"  ("post_id")
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032925"]]
+  [1m[35m (18.4ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (9.6ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'likes'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (8.0ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'posts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (8.1ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'posts_users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (7.5ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'tags'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (7.6ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'tags_posts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (7.4ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "posts" ("post", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["post", "some text"], ["created_at", "2016-03-06 05:35:44.489308"], ["updated_at", "2016-03-06 05:35:44.489308"]]
+  [1m[36m (12.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mLike Load (2.9ms)[0m  SELECT "likes".* FROM "likes" WHERE "likes"."liked_id" = $1  [["liked_id", 1]]
+  [1m[36mUser Load (4.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "posts_users" ON "users"."id" = "posts_users"."user_id" WHERE "posts_users"."post_id" = $1[0m  [["post_id", 1]]
+  [1m[36m (98.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (56.1ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20160304235910)
+  [1m[35m (0.7ms)[0m  BEGIN
+  [1m[36m (214.7ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "username" character varying, "password_hash" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (2.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160304235910"]]
+  [1m[36m (17.8ms)[0m  [1mCOMMIT[0m
+Migrating to AddUpdateStatsToUser (20160306032136)
+  [1m[35m (1.2ms)[0m  BEGIN
+  [1m[36m (2.6ms)[0m  [1mALTER TABLE "users" ADD "status" character varying[0m
+  [1m[35m (3.6ms)[0m  ALTER TABLE "users" ADD "updated_by" integer
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032136"]]
+  [1m[35m (12.0ms)[0m  COMMIT
+Migrating to CreatePosts (20160306032706)
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35m (136.1ms)[0m  CREATE TABLE "posts" ("id" serial primary key, "author_id" integer, "post" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032706"]]
+  [1m[35m (23.6ms)[0m  COMMIT
+Migrating to CreatePostsUsersJoinTable (20160306032743)
+  [1m[36m (1.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (66.6ms)[0m  CREATE TABLE "posts_users" ("id" serial primary key, "user_id" integer, "post_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (48.5ms)[0m  [1mCREATE  INDEX  "index_posts_users_on_user_id" ON "posts_users"  ("user_id")[0m
+  [1m[35m (44.8ms)[0m  CREATE  INDEX  "index_posts_users_on_post_id" ON "posts_users"  ("post_id")
+  [1m[36mSQL (5.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032743"]]
+  [1m[35m (22.0ms)[0m  COMMIT
+Migrating to CreateLikes (20160306032818)
+  [1m[36m (0.7ms)[0m  [1mBEGIN[0m
+  [1m[35m (49.9ms)[0m  CREATE TABLE "likes" ("id" serial primary key, "liked_id" integer, "liker_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032818"]]
+  [1m[35m (16.2ms)[0m  COMMIT
+Migrating to CreateTags (20160306032907)
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35m (95.5ms)[0m  CREATE TABLE "tags" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032907"]]
+  [1m[35m (25.9ms)[0m  COMMIT
+Migrating to CreateTagsPostsJoinTable (20160306032925)
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (61.6ms)[0m  CREATE TABLE "tags_posts" ("id" serial primary key, "tag_id" integer, "post_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (49.3ms)[0m  [1mCREATE  INDEX  "index_tags_posts_on_tag_id" ON "tags_posts"  ("tag_id")[0m
+  [1m[35m (51.3ms)[0m  CREATE  INDEX  "index_tags_posts_on_post_id" ON "tags_posts"  ("post_id")
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032925"]]
+  [1m[35m (19.1ms)[0m  COMMIT
+Migrating to CreateFollowings (20160306155114)
+  [1m[36m (2.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (65.6ms)[0m  CREATE TABLE "followings" ("id" serial primary key, "follower_id" integer, "followed_id" integer, "blocked" boolean DEFAULT 'f') 
+  [1m[36m (42.0ms)[0m  [1mCREATE  INDEX  "index_followings_on_follower_id" ON "followings"  ("follower_id")[0m
+  [1m[35m (38.2ms)[0m  CREATE  INDEX  "index_followings_on_followed_id" ON "followings"  ("followed_id")
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306155114"]]
+  [1m[35m (23.2ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (8.8ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'followings'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (7.3ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'likes'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (7.5ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'posts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (7.3ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'posts_users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (6.8ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'tags'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (6.5ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'tags_posts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (6.4ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "followings" ("follower_id") VALUES ($1) RETURNING "id"  [["follower_id", 1]]
+  [1m[36m (3.0ms)[0m  [1mCOMMIT[0m
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (1.1ms)[0m  BEGIN
+  [1m[36mSQL (2.9ms)[0m  [1mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "one"], ["created_at", "2016-03-06 16:21:57.025701"], ["updated_at", "2016-03-06 16:21:57.025701"]]
+  [1m[35m (36.4ms)[0m  COMMIT
+  [1m[36m (1.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (4.1ms)[0m  INSERT INTO "users" ("username", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["username", "two"], ["created_at", "2016-03-06 16:22:09.375661"], ["updated_at", "2016-03-06 16:22:09.375661"]]
+  [1m[36m (26.7ms)[0m  [1mCOMMIT[0m
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (2.8ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1 OFFSET 1
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.1ms)[0m  INSERT INTO "followings" ("follower_id", "followed_id") VALUES ($1, $2) RETURNING "id"  [["follower_id", 1], ["followed_id", 2]]
+  [1m[36m (34.2ms)[0m  [1mCOMMIT[0m
+  [1m[36mUser Load (1.9ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mFollowing Load (2.2ms)[0m  SELECT "followings".* FROM "followings" WHERE "followings"."followed_id" = $1  [["followed_id", 1]]
+  [1m[36mUser Load (2.5ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1 OFFSET 1[0m
+  [1m[35mFollowing Load (2.2ms)[0m  SELECT "followings".* FROM "followings" WHERE "followings"."followed_id" = $1  [["followed_id", 2]]
+  [1m[36mUser Load (1.9ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1 OFFSET 1[0m
+  [1m[35mUser Load (2.5ms)[0m  SELECT "users".* FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."follower_id" WHERE "followings"."followed_id" = $1  [["followed_id", 2]]
+  [1m[36mUser Load (2.1ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (2.9ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1 OFFSET 1
+  [1m[36mUser Load (2.7ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."followed_id" WHERE "followings"."follower_id" = $1[0m  [["follower_id", 1]]
+  [1m[35mUser Load (3.0ms)[0m  SELECT "users".* FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."follower_id" WHERE "followings"."followed_id" = $1  [["followed_id", 2]]
+  [1m[36mUser Load (3.0ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."follower_id" WHERE "followings"."followed_id" = $1[0m  [["followed_id", 1]]
+  [1m[35mUser Load (3.0ms)[0m  SELECT "users".* FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."followed_id" WHERE "followings"."follower_id" = $1  [["follower_id", 2]]
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mFollowing Load (2.8ms)[0m  SELECT "followings".* FROM "followings" WHERE "followings"."follower_id" = $1  [["follower_id", 1]]
+  [1m[36mUser Load (1.9ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mFollowing Load (2.4ms)[0m  SELECT "followings".* FROM "followings" WHERE "followings"."follower_id" = $1  [["follower_id", 1]]
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (2.3ms)[0m  SELECT "users".* FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."followed_id" WHERE "followings"."follower_id" = $1  [["follower_id", 1]]
+PG::UndefinedColumn: ERROR:  column users.blocked does not exist
+LINE 1: ...wed_id" WHERE "followings"."follower_id" = $1 AND "users"."b...
+                                                             ^
+: SELECT "users".* FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."followed_id" WHERE "followings"."follower_id" = $1 AND "users"."blocked" = 'f'
+  [1m[36mUser Load (1.9ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mFollowing Load (2.5ms)[0m  SELECT "followings".* FROM "followings" WHERE "followings"."follower_id" = $1  [["follower_id", 1]]
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (2.8ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1 OFFSET 1
+  [1m[36mUser Load (2.6ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."followed_id" WHERE "followings"."follower_id" = $1[0m  [["follower_id", 1]]
+  [1m[35mUser Load (3.0ms)[0m  SELECT "users".* FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."follower_id" WHERE "followings"."followed_id" = $1  [["followed_id", 1]]
+  [1m[36mUser Load (2.9ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."followed_id" WHERE "followings"."follower_id" = $1[0m  [["follower_id", 2]]
+  [1m[35mUser Load (3.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."follower_id" WHERE "followings"."followed_id" = $1  [["followed_id", 2]]
+  [1m[36mFollowing Load (2.3ms)[0m  [1mSELECT  "followings".* FROM "followings"  ORDER BY "followings"."id" ASC LIMIT 1[0m
+  [1m[35m (1.1ms)[0m  BEGIN
+  [1m[36mSQL (1.9ms)[0m  [1mUPDATE "followings" SET "blocked" = $1 WHERE "followings"."id" = $2[0m  [["blocked", "t"], ["id", 1]]
+  [1m[35m (21.7ms)[0m  COMMIT
+  [1m[36mFollowing Load (1.5ms)[0m  [1mSELECT "followings".* FROM "followings" WHERE "followings"."blocked" = $1[0m  [["blocked", "f"]]
+  [1m[35m (2.5ms)[0m  SELECT COUNT(*) FROM "followings"
+  [1m[36mFollowing Load (2.3ms)[0m  [1mSELECT  "followings".* FROM "followings"  ORDER BY "followings"."id" ASC LIMIT 1[0m
+  [1m[35mFollowing Load (2.4ms)[0m  SELECT  "followings".* FROM "followings"  ORDER BY "followings"."id" ASC LIMIT 1 OFFSET 1
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.9ms)[0m  UPDATE "followings" SET "blocked" = $1 WHERE "followings"."id" = $2  [["blocked", "t"], ["id", 2]]
+  [1m[36m (28.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mFollowing Load (2.3ms)[0m  SELECT "followings".* FROM "followings"
+  [1m[36mFollowing Load (1.9ms)[0m  [1mSELECT "followings".* FROM "followings" WHERE "followings"."blocked" = $1[0m  [["blocked", "f"]]
+  [1m[35mFollowing Load (1.8ms)[0m  SELECT "followings".* FROM "followings" WHERE "followings"."follower_id" = $1  [["follower_id", 1]]
+  [1m[36mUser Load (2.9ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mFollowing Load (2.6ms)[0m  SELECT "followings".* FROM "followings" WHERE "followings"."follower_id" = $1  [["follower_id", 1]]
+PG::UndefinedColumn: ERROR:  column users.blocked does not exist
+LINE 1: ...wer_id" WHERE "followings"."followed_id" = $1 AND "users"."b...
+                                                             ^
+: SELECT "users".* FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."follower_id" WHERE "followings"."followed_id" = $1 AND "users"."blocked" = 'f'
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mFollowing Load (2.1ms)[0m  SELECT "followings".* FROM "followings" WHERE "followings"."follower_id" = $1  [["follower_id", 1]]
+  [1m[36mFollowing Load (1.8ms)[0m  [1mSELECT "followings".* FROM "followings" WHERE "followings"."followed_id" = $1[0m  [["followed_id", 1]]
+  [1m[35mFollowing Load (2.5ms)[0m  SELECT  "followings".* FROM "followings"  ORDER BY "followings"."id" ASC LIMIT 1
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.8ms)[0m  DELETE FROM "followings" WHERE "followings"."id" = $1  [["id", 1]]
+  [1m[36m (34.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (2.6ms)[0m  SELECT COUNT(*) FROM "followings"
+  [1m[36m (1.8ms)[0m  [1mSELECT COUNT(*) FROM "followings" WHERE "followings"."follower_id" = $1[0m  [["follower_id", 1]]
+  [1m[35mFollowing Load (2.1ms)[0m  SELECT "followings".* FROM "followings"
+  [1m[36mUser Load (2.5ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1 OFFSET 1[0m
+  [1m[35mFollowing Load (1.9ms)[0m  SELECT "followings".* FROM "followings" WHERE "followings"."followed_id" = $1  [["followed_id", 2]]
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "password_test"], ["password_hash", "$2a$10$FxZtbyMboCgVrwyZlDS7M.jghgUKbbj8/Mm9wxtZ9dp2uqmkf3X8G"], ["created_at", "2016-03-06 18:59:41.260740"], ["updated_at", "2016-03-06 18:59:41.260740"]]
+  [1m[36m (36.8ms)[0m  [1mCOMMIT[0m
+  [1m[36mUser Load (2.2ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[36mUser Load (59.4ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (2.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "one"]]
+  [1m[36mUser Load (1.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "ten"]]
+  [1m[35mUser Load (1.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", nil]]
+  [1m[36mUser Load (1.8ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (1.1ms)[0m  BEGIN
+  [1m[36mSQL (22.2ms)[0m  [1mUPDATE "users" SET "password_hash" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["password_hash", "key"], ["updated_at", "2016-03-09 20:22:13.617712"], ["id", 1]]
+  [1m[35m (83.1ms)[0m  COMMIT
+  [1m[36mUser Load (1.9ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (15.8ms)[0m  SELECT "users".* FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."followed_id" WHERE "followings"."follower_id" = $1  [["follower_id", 1]]
+  [1m[36mUser Load (2.7ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (2.7ms)[0m  SELECT "users".* FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."followed_id" WHERE "followings"."follower_id" = $1 AND "users"."id" = $2  [["follower_id", 1], ["id", 5]]
+  [1m[36mUser Load (2.4ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (2.5ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
+PG::UndefinedTable: ERROR:  missing FROM-clause entry for table "id"
+LINE 1: ...wed_id" WHERE "followings"."follower_id" = $1 AND "id"."id" ...
+                                                             ^
+: SELECT  "users".* FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."followed_id" WHERE "followings"."follower_id" = $1 AND "id"."id" = 5 LIMIT 1
+  [1m[36mUser Load (2.5ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (2.7ms)[0m  SELECT  "users".* FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."followed_id" WHERE "followings"."follower_id" = $1 AND "users"."id" = $2 LIMIT 1  [["follower_id", 1], ["id", 5]]
+  [1m[36mUser Load (2.4ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (3.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."followed_id" WHERE "followings"."follower_id" = $1  [["follower_id", 1]]
+  [1m[36mUser Load (56.1ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1 OFFSET 1[0m
+  [1m[36mActiveRecord::SchemaMigration Load (17.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.6ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.7ms)[0m  BEGIN
+  [1m[36mSQL (16.8ms)[0m  [1mDELETE FROM "posts_users" WHERE "posts_users"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35mSQL (0.7ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 2]]
+  [1m[36m (25.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mDELETE FROM "posts_users" WHERE "posts_users"."user_id" = $1[0m  [["user_id", 3]]
+  [1m[35mSQL (0.9ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 3]]
+  [1m[36m (5.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mDELETE FROM "posts_users" WHERE "posts_users"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35mSQL (0.9ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 1]]
+  [1m[36m (4.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36mSQL (13.9ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "user 0"], ["password_hash", "$2a$10$Juf7Fqcf7X8oIqx5mefKAOALmNrumrRpFncWV260vFmwxClcfUGTe"], ["created_at", "2016-03-11 22:55:48.837232"], ["updated_at", "2016-03-11 22:55:48.837232"]]
+  [1m[35m (29.5ms)[0m  COMMIT
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "user 1"], ["password_hash", "$2a$10$JOC842QtHz7y.maCiLzJUOjsq7eM7OwAmnE9sTOEtk3emp/tQZ/4q"], ["created_at", "2016-03-11 22:55:49.034143"], ["updated_at", "2016-03-11 22:55:49.034143"]]
+  [1m[36m (36.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "user 2"], ["password_hash", "$2a$10$yiuM90d2MvdeedYUr9Mn9eF5xPhttSswhk0QsSSGyjIw/H7XdxyW6"], ["created_at", "2016-03-11 22:55:49.218277"], ["updated_at", "2016-03-11 22:55:49.218277"]]
+  [1m[35m (42.4ms)[0m  COMMIT
+  [1m[36m (0.8ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.7ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "user 3"], ["password_hash", "$2a$10$j8LdV0Ja8S6E8Fb/aRIai.pN6at5mELJ4igorDwAVERASZMW9JFEq"], ["created_at", "2016-03-11 22:55:49.455232"], ["updated_at", "2016-03-11 22:55:49.455232"]]
+  [1m[36m (26.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  BEGIN
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "user 4"], ["password_hash", "$2a$10$M8cL2m6rYaO40ZSWCJLRM.CehRCUjs0sNdLFmeqLpZjS54rHuKBAC"], ["created_at", "2016-03-11 22:55:49.705577"], ["updated_at", "2016-03-11 22:55:49.705577"]]
+  [1m[35m (31.3ms)[0m  COMMIT
+  [1m[36mUser Load (1.9ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-11 21:53:09 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/railties-4.2.4/lib/rails/templates/rails/welcome/index.html.erb (10.8ms)
+Completed 200 OK in 80ms (Views: 34.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2016-03-11 21:55:00 -0600
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (6.6ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/dwin357/Documents/code/little_bird/app/views/sessions/new.html.erb:8: syntax error, unexpected ')', expecting =>
+...ay", {errors: flash[:errors]} );@output_buffer.safe_append='
+...                               ^
+/home/dwin357/Documents/code/little_bird/app/views/sessions/new.html.erb:9: syntax error, unexpected ')', expecting =>
+...orm", {session: flash[:data]} );@output_buffer.safe_append='
+...                               ^
+/home/dwin357/Documents/code/little_bird/app/views/sessions/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting ')'
+/home/dwin357/Documents/code/little_bird/app/views/sessions/new.html.erb:18: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/sessions/new.html.erb:8: syntax error, unexpected ')', expecting =>
+  app/views/sessions/new.html.erb:9: syntax error, unexpected ')', expecting =>
+  app/views/sessions/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/sessions/new.html.erb:18: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (24.5ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.7ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.7ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (81.8ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (2.0ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (92.3ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (142.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2016-03-11 21:57:08 -0600
+Processing by SessionsController#new as HTML
+  Rendered shared/_errors_display.html.erb (1.9ms)
+  Rendered sessions/_signin_form.html.erb (5.6ms)
+  Rendered sessions/new.html.erb within layouts/application (16.3ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/dwin357/Documents/code/little_bird/app/views/sessions/_signin_form.html.erb:15: syntax error, unexpected ')', expecting :: or '[' or '.'
+...er.append=( f.submit, "Login" );@output_buffer.safe_append='
+...                               ^
+/home/dwin357/Documents/code/little_bird/app/views/sessions/_signin_form.html.erb:17: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end ;@output_buffer.to_s
+             ^
+/home/dwin357/Documents/code/little_bird/app/views/sessions/_signin_form.html.erb:18: syntax error, unexpected keyword_ensure, expecting ')'
+/home/dwin357/Documents/code/little_bird/app/views/sessions/_signin_form.html.erb:20: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/sessions/_signin_form.html.erb:15: syntax error, unexpected ')', expecting :: or '[' or '.'
+  app/views/sessions/_signin_form.html.erb:17: syntax error, unexpected keyword_end, expecting ')'
+  app/views/sessions/_signin_form.html.erb:18: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/sessions/_signin_form.html.erb:20: syntax error, unexpected keyword_end, expecting ')'
+  app/views/sessions/new.html.erb:9:in `_app_views_sessions_new_html_erb___2578888353125619090_47007373075820'
+
+
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (22.7ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.8ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (64.1ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (36.4ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (72.2ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2016-03-11 21:58:59 -0600
+Processing by SessionsController#new as HTML
+  Rendered shared/_errors_display.html.erb (0.2ms)
+  Rendered sessions/_signin_form.html.erb (67.2ms)
+  Rendered sessions/new.html.erb within layouts/application (78.8ms)
+Completed 500 Internal Server Error in 98ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    1: <%= form_for(:session) do |f| %>
+    2:   <div class='form-group'>  
+    3:     <%= f.label :username %>
+    4:     <%= f.text_field :username, placeholder: "AwsomeSauce", value: session[:username] %>
+    5:   </div>
+    6:   <div class='form-group'>
+    7:     <%= f.label :password %>
+  app/views/sessions/_signin_form.html.erb:4:in `block in _app_views_sessions__signin_form_html_erb__1935090891521930311_47007375667860'
+  app/views/sessions/_signin_form.html.erb:1:in `_app_views_sessions__signin_form_html_erb__1935090891521930311_47007375667860'
+  app/views/sessions/new.html.erb:9:in `_app_views_sessions_new_html_erb___2578888353125619090_47007373075820'
+
+
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (22.8ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.7ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (65.7ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (37.3ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (83.2ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2016-03-11 22:00:53 -0600
+Processing by SessionsController#new as HTML
+  Rendered shared/_errors_display.html.erb (4.3ms)
+  Rendered sessions/_signin_form.html.erb (57.7ms)
+  Rendered sessions/new.html.erb within layouts/application (69.2ms)
+Completed 500 Internal Server Error in 76ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `password' for #<ActionView::Helpers::FormBuilder:0x005581843fe9f8>):
+     5:   </div>
+     6:   <div class='form-group'>
+     7:     <%= f.label :password %>
+     8:     <%= f.password :password, placeholder: "Pa$$word" %>
+     9:   </div>
+    10:   <div class='form-group'>
+    11:     <%= f.label :password_confirm %>
+  app/views/sessions/_signin_form.html.erb:8:in `block in _app_views_sessions__signin_form_html_erb__1935090891521930311_47007379017300'
+  app/views/sessions/_signin_form.html.erb:1:in `_app_views_sessions__signin_form_html_erb__1935090891521930311_47007379017300'
+  app/views/sessions/new.html.erb:9:in `_app_views_sessions_new_html_erb___2578888353125619090_47007373075820'
+
+
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (24.6ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.6ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (66.5ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (35.6ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (70.9ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2016-03-11 22:02:33 -0600
+Processing by SessionsController#new as HTML
+  Rendered shared/_errors_display.html.erb (0.3ms)
+  Rendered sessions/_signin_form.html.erb (57.7ms)
+  Rendered sessions/new.html.erb within layouts/application (71.9ms)
+Completed 500 Internal Server Error in 101ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `password' for #<ActionView::Helpers::FormBuilder:0x00558182073ee8>):
+     5:   </div>
+     6:   <div class='form-group'>
+     7:     <%= f.label :password %>
+     8:     <%= f.password :password, placeholder: "Pa$$word" %>
+     9:   </div>
+    10:   <div class='form-group'>
+    11:     <%= f.label :password_confirm %>
+  app/views/sessions/_signin_form.html.erb:8:in `block in _app_views_sessions__signin_form_html_erb__1935090891521930311_47007360447460'
+  app/views/sessions/_signin_form.html.erb:1:in `_app_views_sessions__signin_form_html_erb__1935090891521930311_47007360447460'
+  app/views/sessions/new.html.erb:9:in `_app_views_sessions_new_html_erb___2578888353125619090_47007373075820'
+
+
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (22.4ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.9ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (62.4ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (36.2ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (71.5ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2016-03-11 22:02:57 -0600
+Processing by SessionsController#new as HTML
+  Rendered shared/_errors_display.html.erb (0.2ms)
+  Rendered sessions/_signin_form.html.erb (44.1ms)
+  Rendered sessions/new.html.erb within layouts/application (50.9ms)
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `password' for #<ActionView::Helpers::FormBuilder:0x005581837d3f98>):
+     5:   </div>
+     6:   <div class='form-group'>
+     7:     <%= f.label :password %>
+     8:     <%= f.password :password, placeholder: "Pa$$word" %>
+     9:   </div>
+    10:   <div class='form-group'>
+    11:     <%= f.label :password_confirm %>
+  app/views/sessions/_signin_form.html.erb:8:in `block in _app_views_sessions__signin_form_html_erb__1935090891521930311_47007360447460'
+  app/views/sessions/_signin_form.html.erb:1:in `_app_views_sessions__signin_form_html_erb__1935090891521930311_47007360447460'
+  app/views/sessions/new.html.erb:9:in `_app_views_sessions_new_html_erb___2578888353125619090_47007373075820'
+
+
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (22.8ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.3ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (64.6ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (35.6ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.2ms)
+  Rendered /home/dwin357/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (71.8ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2016-03-11 22:17:01 -0600
+Processing by SessionsController#new as HTML
+  Rendered shared/_errors_display.html.erb (0.3ms)
+  Rendered sessions/_signin_form.html.erb (47.4ms)
+  Rendered sessions/new.html.erb within layouts/application (58.6ms)
+  Rendered shared/_navbar.html.erb (0.7ms)
+Completed 200 OK in 2987ms (Views: 2984.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/_assets/bootstrap-theme.min.self-6f2f4ae8073eeed25f7f4c1fe221c20b00fe8aea594a38fa55e240d6d6a2e51d.css?body=1" for 127.0.0.1 at 2016-03-11 22:17:04 -0600
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-03-11 22:17:04 -0600
+
+
+Started GET "/assets/_assets/bootstrap.min.self-66fe84b79c6d5db31355296a8c9627d232721fe3ac3c31f3554ccc7e999279b6.css?body=1" for 127.0.0.1 at 2016-03-11 22:17:04 -0600
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 127.0.0.1 at 2016-03-11 22:17:04 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2016-03-11 22:17:04 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-03-11 22:17:04 -0600
+
+
+Started GET "/assets/_assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for 127.0.0.1 at 2016-03-11 22:17:04 -0600
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-03-11 22:17:04 -0600
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2016-03-11 22:29:32 -0600
+Processing by SessionsController#new as HTML
+  Rendered shared/_errors_display.html.erb (0.2ms)
+  Rendered sessions/_signin_form.html.erb (17.6ms)
+  Rendered sessions/new.html.erb within layouts/application (30.1ms)
+  Rendered shared/_navbar.html.erb (0.2ms)
+Completed 200 OK in 123ms (Views: 120.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/_assets/bootstrap.min.self-66fe84b79c6d5db31355296a8c9627d232721fe3ac3c31f3554ccc7e999279b6.css?body=1" for 127.0.0.1 at 2016-03-11 22:29:32 -0600
+
+
+Started GET "/assets/_assets/bootstrap-theme.min.self-6f2f4ae8073eeed25f7f4c1fe221c20b00fe8aea594a38fa55e240d6d6a2e51d.css?body=1" for 127.0.0.1 at 2016-03-11 22:29:32 -0600
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-03-11 22:29:32 -0600
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 127.0.0.1 at 2016-03-11 22:29:32 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2016-03-11 22:29:32 -0600
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-03-11 22:29:33 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-03-11 22:29:33 -0600
+
+
+Started GET "/assets/_assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for 127.0.0.1 at 2016-03-11 22:29:33 -0600
