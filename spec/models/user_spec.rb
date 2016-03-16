@@ -17,6 +17,13 @@ RSpec.describe User, type: :model do
       t = User.reflect_on_association(:posts)
       expect(t.macro).to eq(:has_and_belongs_to_many)
     end 
+    it "has many followers" do
+      t = User.reflect_on_association(:followers)
+      expect(t.macro).to eq()
+    end
+
+    # it "has many followed"
+
   end
 
   describe "password" do

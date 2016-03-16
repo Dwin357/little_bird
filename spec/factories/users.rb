@@ -4,4 +4,9 @@ FactoryGirl.define do
     password "joker"
   end
 
+  factory :user2 do
+    username "Wonderwoman"
+    password "circe"
+  end
+
 end

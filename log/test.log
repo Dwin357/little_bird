@@ -1590,3 +1590,64 @@ Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
   [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
   [1m[35m (0.3ms)[0m  BEGIN
   [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (38.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.7ms)[0m  BEGIN
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 44ms (Views: 43.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.8ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (63.6ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$ccKI6hoCS7BiwIwuFdaXkOYO.jCPy.3Ss4A9vo556LioHpi4DflYK"], ["created_at", "2016-03-15 22:18:58.308682"], ["updated_at", "2016-03-15 22:18:58.308682"]]
+  [1m[36m (0.7ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"username"=>"Batman", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (1.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "Batman"]]
+  Rendered sessions/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 200ms (Views: 1.6ms | ActiveRecord: 1.5ms)
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"username"=>"Batman", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "Batman"]]
+  Rendered sessions/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.9ms)
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$ZiavAUMv0eiJONHYbw9E8u2fO0WRVNttjn3HEBnwpCTL2.uzioaBu"], ["created_at", "2016-03-15 22:18:58.829929"], ["updated_at", "2016-03-15 22:18:58.829929"]]
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$EoovF1M9zvTKUsd9eLTRgeehwRHEkiHyyAOKv1VuRs7qXsvxWhWd6"], ["created_at", "2016-03-15 22:18:59.041286"], ["updated_at", "2016-03-15 22:18:59.041286"]]
+  [1m[36m (0.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "users" SET "password_hash" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["password_hash", "$2a$10$o6hWoW3O6u.UG8H32aq2JOpWvoAIpoplobnoxpO3vtIRJljb8WmH6"], ["updated_at", "2016-03-15 22:18:59.132325"], ["id", 101]]
+  [1m[35m (0.5ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$5.TV0AJn.YkJi2uHFO1FOeSR0yeHRZyqtjrLBdn8OTLjaepq.685C"], ["created_at", "2016-03-15 22:18:59.341193"], ["updated_at", "2016-03-15 22:18:59.341193"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (1.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
