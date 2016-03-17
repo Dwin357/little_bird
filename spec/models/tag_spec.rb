@@ -1,5 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe Tag, type: :model do
-  # pending "add some examples to (or delete) #{__FILE__}"
+  describe "associations" do
+    it "has many & belongs to many posts" do
+      t = Tag.reflect_on_association(:posts)
+      expect(t.macro).to eq(:has_and_belongs_to_many)
+    end 
+  end
 end
