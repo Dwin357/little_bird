@@ -22,13 +22,20 @@ RSpec.describe SessionsController, type: :controller do
     end
 
     context 'when password is valid' do
-      it 'sets the user in the session and redirects to user show' do
+      it 'sets the user in the session' do
         user = FactoryGirl.create(:user)
 
-        post :create, session: {username: user.username, password: user.password}
+        post :create, session: {username: user.username, password: attributes_for(:user)[:password]}
 
-        # expect(response).to redirect_to(user_path(user))
-        # expect(current_user!).to eq(user) #session is not being set... not sure why not
+        expect(current_user!).to eq(user)
+      end
+
+      it 'redirects the user to their show page' do
+        user = FactoryGirl.create(:user)
+
+        post :create, session: {username: user.username, password: attributes_for(:user)[:password]}
+
+        expect(response).to redirect_to(user_path(user))
       end
     end
   end

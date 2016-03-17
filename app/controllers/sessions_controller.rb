@@ -4,6 +4,7 @@ class SessionsController < ApplicationController
 
   def create
     u = User.find_by(username: session_params[:username])
+
     if u && u.authentic_password?(session_params[:password])
       login(u)
       redirect_to user_path(u)

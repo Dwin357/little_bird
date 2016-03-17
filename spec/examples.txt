@@ -1,8 +1,9 @@
 example_id                                              | status  | run_time        |
 ------------------------------------------------------- | ------- | --------------- |
-./spec/controllers/sessions_controller_spec.rb[1:1:1]   | passed  | 0.13912 seconds |
-./spec/controllers/sessions_controller_spec.rb[1:2:1:1] | passed  | 0.10374 seconds |
-./spec/controllers/sessions_controller_spec.rb[1:2:2:1] | passed  | 0.26322 seconds |
+./spec/controllers/sessions_controller_spec.rb[1:1:1]   | passed  | 0.00793 seconds |
+./spec/controllers/sessions_controller_spec.rb[1:2:1:1] | passed  | 0.11143 seconds |
+./spec/controllers/sessions_controller_spec.rb[1:2:2:1] | passed  | 0.24241 seconds |
+./spec/controllers/sessions_controller_spec.rb[1:2:2:2] | passed  | 0.22781 seconds |
 ./spec/controllers/users_controller_spec.rb[1:1:1:1]    | pending | 0.00003 seconds |
 ./spec/controllers/users_controller_spec.rb[1:1:2:1]    | pending | 0.00004 seconds |
 ./spec/controllers/users_controller_spec.rb[1:1:2:2]    | pending | 0.00002 seconds |
