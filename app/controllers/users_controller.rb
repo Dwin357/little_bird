@@ -4,12 +4,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = user_from_params ||= current_user!
-    if follows?(@user)
-      @posts = current_user!.stream_posts
-    else
-
-    end
+    @posts = current_user!.stream_posts
   end
 
   def edit
@@ -18,6 +13,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+      login(@user)
       redirect_to user_path(@user)
     else
       @errors = @user.errors.full_messages
@@ -33,7 +29,7 @@ class UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:username, :password, :password_confirm)
+    params.require(:user).permit(:username, :password)
   end
 
   def user_from_params
