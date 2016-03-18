@@ -6,7 +6,7 @@ RSpec.describe User, type: :model do
 
   describe "test suit" do
     it "has a valid factory" do
-      expect(Factory.create(:user)).to be_valid
+      expect(FactoryGirl.create(:user)).to be_valid
     end
   end
 
