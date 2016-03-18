@@ -7,6 +7,10 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 User.destroy_all if User.any?
+Like.destroy_all if Like.any?
+Tag.destroy_all if Tag.any?
+Post.destroy_all if Post.any?
+Following.destroy_all if Following.any?
 
 5.times do |i|
   User.create!(username:"user #{i}", password: "pw #{i}")

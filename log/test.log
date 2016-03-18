@@ -3020,3 +3020,699 @@ Processing by UsersController#new as HTML
   Rendered users/new.html.erb within layouts/application (0.5ms)
 Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms)
   [1m[35m (0.8ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 38ms (Views: 18.2ms | ActiveRecord: 6.1ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$LWUcnFLJEyDeBq7kDshru.am.hZsThU9DPT1sO0T9GuGXvd2v2gPu"], ["created_at", "2016-03-18 18:57:40.001068"], ["updated_at", "2016-03-18 18:57:40.001068"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by SessionsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/sessions/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$d.4s5TqXQvNR9YOBwQqcaOgxeEqVaNCoDYRqcUPOw0Svjfa052wMm"], ["created_at", "2016-03-18 18:57:40.108375"], ["updated_at", "2016-03-18 18:57:40.108375"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by SessionsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/sessions/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"username"=>"Batman", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "Batman"]]
+  Rendered sessions/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 7ms (Views: 1.2ms | ActiveRecord: 0.7ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$OsIudcm8yGWEVp6lApjOYuMuzaSv2Qfn3KJSdG2DOoIsy.IwpMiNS"], ["created_at", "2016-03-18 18:57:40.346978"], ["updated_at", "2016-03-18 18:57:40.346978"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"username"=>"Batman", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "Batman"]]
+Redirected to http://test.host/users/177
+Completed 302 Found in 95ms (ActiveRecord: 0.7ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 177]]
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$g7LWwvW.pOCg3WtpIJdt3u3JzivrfFS80/Y9.TbxHb2g9Zutwqe0y"], ["created_at", "2016-03-18 18:57:40.545040"], ["updated_at", "2016-03-18 18:57:40.545040"]]
+  [1m[35m (0.5ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"username"=>"Batman", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "Batman"]]
+Redirected to http://test.host/users/178
+Completed 302 Found in 91ms (ActiveRecord: 0.7ms)
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 35ms (Views: 14.1ms | ActiveRecord: 6.2ms)
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (1.2ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"Batman", "password"=>"[FILTERED]"}}
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$F96N3PLMXb7l0nS/a/h5Xu.3zo45DBGODSiGiePaqB3OyBjoDNcoC"], ["created_at", "2016-03-18 19:07:58.098388"], ["updated_at", "2016-03-18 19:07:58.098388"]]
+  [1m[35m (0.5ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/users/179
+Completed 302 Found in 109ms (ActiveRecord: 2.6ms)
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$dW8yBsBqO/RwWJBLr98yyOqmCIFX6rXmxtFAI9jFuuuxhXZU5ah76"], ["created_at", "2016-03-18 19:07:58.220194"], ["updated_at", "2016-03-18 19:07:58.220194"]]
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"username"=>"Batman", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "Batman"]]
+Redirected to http://test.host/users/180
+Completed 302 Found in 108ms (ActiveRecord: 0.9ms)
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$oV1cc8Z8Tp4UA1uoaFGHx.J5cxG3uKjXuDYcb22y/J3948Hxzlwnm"], ["created_at", "2016-03-18 19:07:58.432974"], ["updated_at", "2016-03-18 19:07:58.432974"]]
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"username"=>"Batman", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "Batman"]]
+Redirected to http://test.host/users/181
+Completed 302 Found in 94ms (ActiveRecord: 0.9ms)
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 181]]
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"username"=>"Batman", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "Batman"]]
+  Rendered sessions/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 4ms (Views: 1.4ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$/vKPj9r.tLhNbslrXxGILu30.gxmMAG7ppW2aQIhjiCl.sIJqJWbu"], ["created_at", "2016-03-18 19:07:58.734373"], ["updated_at", "2016-03-18 19:07:58.734373"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by SessionsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/sessions/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.8ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$DuSGTQQvHm4/W90mtJtUiuspkXmodVbHE/6oNYCm4WxYzN8moc70a"], ["created_at", "2016-03-18 19:07:58.845810"], ["updated_at", "2016-03-18 19:07:58.845810"]]
+  [1m[36m (0.6ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by SessionsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/sessions/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (1.2ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"Batman", "password"=>"[FILTERED]"}}
+  [1m[35m (0.5ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$CrcoSyytKCaAuPBvVmWNouJAVlOlNsdn59WWHcOY1S1QgRHqZx1/e"], ["created_at", "2016-03-18 19:08:13.266635"], ["updated_at", "2016-03-18 19:08:13.266635"]]
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/users/184
+Completed 302 Found in 119ms (ActiveRecord: 6.8ms)
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"username"=>"Batman", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "Batman"]]
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 19ms (Views: 4.3ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$WhJylUlkMJ5DkEb3ENI1me7agevLNEQcPWYWXZSb9dJHBAmEDgRUS"], ["created_at", "2016-03-18 19:08:13.647906"], ["updated_at", "2016-03-18 19:08:13.647906"]]
+  [1m[36m (0.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"username"=>"Batman", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "Batman"]]
+Redirected to http://test.host/users/185
+Completed 302 Found in 92ms (ActiveRecord: 0.7ms)
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$S7DI4wFrgGC5EmGKiddEYenbwr9UJhJY6d8HocwymhluyPUHC01D2"], ["created_at", "2016-03-18 19:08:13.845016"], ["updated_at", "2016-03-18 19:08:13.845016"]]
+  [1m[36m (0.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"username"=>"Batman", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "Batman"]]
+Redirected to http://test.host/users/186
+Completed 302 Found in 91ms (ActiveRecord: 0.7ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 186]]
+  [1m[35m (0.8ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (2.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$KSYXjgpICUVIq7CQRGBYteEBf2tj3tvTmlYba4x2K.HGoczE4N/6W"], ["created_at", "2016-03-18 19:08:14.045083"], ["updated_at", "2016-03-18 19:08:14.045083"]]
+  [1m[35m (0.5ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by SessionsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/sessions/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$qqruJniZeGnhk/.K7qhbEe1sDX8YAy7IsGhYNhyBybsC/RjOtJpd."], ["created_at", "2016-03-18 19:08:14.155413"], ["updated_at", "2016-03-18 19:08:14.155413"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by SessionsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/sessions/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$gngBMskbbL3yA530MDY/suhzcyDN0mLbw/8gl1.iRAp7h3ItDtqiG"], ["created_at", "2016-03-18 19:13:15.494351"], ["updated_at", "2016-03-18 19:13:15.494351"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by SessionsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/sessions/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$tMX9SJU.9AR45FC.g5zCVegEp4VG3JxzuPKu8.SJj6QL.faHPpPCW"], ["created_at", "2016-03-18 19:13:15.617005"], ["updated_at", "2016-03-18 19:13:15.617005"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by SessionsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/sessions/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"username"=>"Batman", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "Batman"]]
+  Rendered sessions/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 7ms (Views: 1.3ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$zgc.F.HuPeLHfKPVnDo8oOojobQ.63h3yhuTLOb92VJY/lBH92byy"], ["created_at", "2016-03-18 19:13:15.848443"], ["updated_at", "2016-03-18 19:13:15.848443"]]
+  [1m[36m (0.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"username"=>"Batman", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "Batman"]]
+Redirected to http://test.host/users/191
+Completed 302 Found in 94ms (ActiveRecord: 0.6ms)
+  [1m[36m (1.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$FlfmasOMMAF73Z/KjfhSFuQ3JgAR4Cq0Mlc8vExET6mVV3r8dou5K"], ["created_at", "2016-03-18 19:13:16.046625"], ["updated_at", "2016-03-18 19:13:16.046625"]]
+  [1m[36m (0.7ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"username"=>"Batman", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "Batman"]]
+Redirected to http://test.host/users/192
+Completed 302 Found in 90ms (ActiveRecord: 1.0ms)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 192]]
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "users"
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"Batman", "password"=>"[FILTERED]"}}
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$pTeL1Z3gDC/oo5zBn2XZyOA2aLOaRY6CawFt5qL6OAEvckLoLdMVC"], ["created_at", "2016-03-18 19:13:16.254513"], ["updated_at", "2016-03-18 19:13:16.254513"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/users/193
+Completed 302 Found in 94ms (ActiveRecord: 1.4ms)
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"Batman", "password"=>"[FILTERED]"}}
+  [1m[36m (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$vh4z/8ojTQ8qYEQXEtigd.sL7B8QyM14l86bMZFLTHt36P2eVJGz."], ["created_at", "2016-03-18 19:13:16.361971"], ["updated_at", "2016-03-18 19:13:16.361971"]]
+  [1m[36m (1.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/users/194
+Completed 302 Found in 96ms (ActiveRecord: 2.5ms)
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 194]]
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.7ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$HyQ8j31hFi8uEvVlsUEoYuer2aZE64bP542UwBStFWwuvJCmIC3hC"], ["created_at", "2016-03-18 19:14:17.525027"], ["updated_at", "2016-03-18 19:14:17.525027"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by SessionsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/sessions/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$In5L2bFlIwnSxgU51sVgXuP208huPpaU9elQHQOmOfFlz4XIzexfu"], ["created_at", "2016-03-18 19:14:17.653493"], ["updated_at", "2016-03-18 19:14:17.653493"]]
+  [1m[36m (0.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by SessionsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/sessions/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"username"=>"Batman", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "Batman"]]
+  Rendered sessions/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 7ms (Views: 1.2ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (1.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$u64i.ImlR1S.kOSx/z4.cuDbk1vzO3egxScMmJbr/W289FFNq99Di"], ["created_at", "2016-03-18 19:14:17.889661"], ["updated_at", "2016-03-18 19:14:17.889661"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"username"=>"Batman", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "Batman"]]
+Redirected to http://test.host/users/197
+Completed 302 Found in 93ms (ActiveRecord: 0.7ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 197]]
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$W5a30aUTNG8v1Hc59D3Jcer5EUY/.bxqHPKHpbu3bq82WCMqAjVZi"], ["created_at", "2016-03-18 19:14:18.120414"], ["updated_at", "2016-03-18 19:14:18.120414"]]
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"username"=>"Batman", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "Batman"]]
+Redirected to http://test.host/users/198
+Completed 302 Found in 94ms (ActiveRecord: 0.7ms)
+  [1m[35m (0.7ms)[0m  ROLLBACK
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "users"
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"Batman", "password"=>"[FILTERED]"}}
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$qEfOE17DTnwkLtNiyoER9uAqsenXHLIJUqYPg/mRsEwCionDOxY8u"], ["created_at", "2016-03-18 19:14:18.350858"], ["updated_at", "2016-03-18 19:14:18.350858"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/users/199
+Completed 302 Found in 98ms (ActiveRecord: 1.5ms)
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"Batman", "password"=>"[FILTERED]"}}
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$NI6j8IX58zFkU7NFif4dQedzj/bM5F0gbhSAUTVkXgwPJkJs6u53C"], ["created_at", "2016-03-18 19:14:18.463041"], ["updated_at", "2016-03-18 19:14:18.463041"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/users/200
+Completed 302 Found in 102ms (ActiveRecord: 1.4ms)
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 200]]
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"username"=>"Batman", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "Batman"]]
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 37ms (Views: 13.8ms | ActiveRecord: 3.4ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$8BzUYPuAqhFGerbun9n5Z.5X8Jc2Rrh0b6LR1xEQ6.hEY1Gq/fMjq"], ["created_at", "2016-03-18 19:17:40.135503"], ["updated_at", "2016-03-18 19:17:40.135503"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"username"=>"Batman", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "Batman"]]
+Redirected to http://test.host/users/201
+Completed 302 Found in 92ms (ActiveRecord: 0.7ms)
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$S/uy2ZzccGX1TT9KlH33Y.eq6Nvz3/oHfQ8gNtgjKh.8H.4hJGCPe"], ["created_at", "2016-03-18 19:17:40.333452"], ["updated_at", "2016-03-18 19:17:40.333452"]]
+  [1m[35m (0.6ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"username"=>"Batman", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "Batman"]]
+Redirected to http://test.host/users/202
+Completed 302 Found in 91ms (ActiveRecord: 0.9ms)
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 202]]
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$9jSYEnGji3KZ72DCNbx4UOHJcOBQHQcDSMI0P/I6y8Ai/EreVICdO"], ["created_at", "2016-03-18 19:17:40.544205"], ["updated_at", "2016-03-18 19:17:40.544205"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by SessionsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/sessions/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$PsL09lukyGm3eVMKiLI2z.DGgLeAqgr7I5nmfe2GS6bdch6MCsK4."], ["created_at", "2016-03-18 19:17:40.649764"], ["updated_at", "2016-03-18 19:17:40.649764"]]
+  [1m[35m (0.5ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by SessionsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/sessions/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.8ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "users"
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"Batman", "password"=>"[FILTERED]"}}
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$OiDMEWOnGynZdVtLNw/8IOoFxlykOlYpXHo2lyoVI/qF7xF0SqJc."], ["created_at", "2016-03-18 19:17:40.785751"], ["updated_at", "2016-03-18 19:17:40.785751"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/users/205
+Completed 302 Found in 100ms (ActiveRecord: 1.4ms)
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"Batman", "password"=>"[FILTERED]"}}
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$eXWcpYLoIzlNxWq9kcB36Ory677oOUuaqHbUm19P.ED20C0Y6paSO"], ["created_at", "2016-03-18 19:17:40.890486"], ["updated_at", "2016-03-18 19:17:40.890486"]]
+  [1m[36m (0.6ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/users/206
+Completed 302 Found in 96ms (ActiveRecord: 1.9ms)
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"Batman", "password"=>"[FILTERED]"}}
+  [1m[36m (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$BGLMcG4ZyOJsqGdQTH29heINC9g.Rj/SHcxIBRTXEqdo3lT45d0OG"], ["created_at", "2016-03-18 19:17:41.000478"], ["updated_at", "2016-03-18 19:17:41.000478"]]
+  [1m[36m (0.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/users/207
+Completed 302 Found in 97ms (ActiveRecord: 1.6ms)
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 207]]
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"Batman", "password"=>"[FILTERED]"}}
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$J2N4vrKWri8a7.mqdH6OCuRvNLUj5OA6SeVFOwlGWUPtQvgarsjwy"], ["created_at", "2016-03-18 19:17:54.133126"], ["updated_at", "2016-03-18 19:17:54.133126"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/users/208
+Completed 302 Found in 123ms (ActiveRecord: 8.4ms)
+  [1m[35mUser Load (1.5ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 208]]
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"Batman", "password"=>"[FILTERED]"}}
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$p6uHVJWNLN5TMBh6uXv7aeUgelLK1QQ7ylgWO60imNyDSEBYoAy9u"], ["created_at", "2016-03-18 19:17:54.260025"], ["updated_at", "2016-03-18 19:17:54.260025"]]
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/users/209
+Completed 302 Found in 94ms (ActiveRecord: 1.6ms)
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "users"
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"Batman", "password"=>"[FILTERED]"}}
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$2Xn70gDCuLX6lxBChP/tiuCgQLrL3oQocX2Hvre1.n57e7wDflGrW"], ["created_at", "2016-03-18 19:17:54.373049"], ["updated_at", "2016-03-18 19:17:54.373049"]]
+  [1m[36m (0.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/users/210
+Completed 302 Found in 94ms (ActiveRecord: 1.5ms)
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$/kyFzqOBaBDGtJpfbEtHh.s9jFr/r7H/gbA7Hq1qVRpFe5OR3mxIq"], ["created_at", "2016-03-18 19:17:54.498634"], ["updated_at", "2016-03-18 19:17:54.498634"]]
+  [1m[36m (0.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by SessionsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/sessions/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$ExHC0Sa/jUKazqveJhEdUeigTJibOL0BhEWaGpnOdbEyS4R5aTaOi"], ["created_at", "2016-03-18 19:17:54.601305"], ["updated_at", "2016-03-18 19:17:54.601305"]]
+  [1m[35m (0.5ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by SessionsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/sessions/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"username"=>"Batman", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "Batman"]]
+  Rendered sessions/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 6ms (Views: 1.4ms | ActiveRecord: 0.7ms)
+  [1m[36m (0.8ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$8B0/bJvlCmRb.MgvmArt8uth45CJnxhnY6wyfXHv4g3OOzs1RQvwq"], ["created_at", "2016-03-18 19:17:54.826778"], ["updated_at", "2016-03-18 19:17:54.826778"]]
+  [1m[36m (0.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"username"=>"Batman", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "Batman"]]
+Redirected to http://test.host/users/213
+Completed 302 Found in 91ms (ActiveRecord: 0.8ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$xtYAXicUXglla3fMLgaJ2O.J.kZiZ1GSZHn0.M59enzabK9riHh9W"], ["created_at", "2016-03-18 19:17:55.022040"], ["updated_at", "2016-03-18 19:17:55.022040"]]
+  [1m[36m (0.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"username"=>"Batman", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "Batman"]]
+Redirected to http://test.host/users/214
+Completed 302 Found in 89ms (ActiveRecord: 0.8ms)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 214]]
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"username"=>"Batman", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "Batman"]]
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 37ms (Views: 14.8ms | ActiveRecord: 1.3ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$IEIqXM3/vJ/ZDrM8DdTlcuqUDGZu.1hPpF02jwwLUVTJapE/QwPFm"], ["created_at", "2016-03-18 19:19:34.602152"], ["updated_at", "2016-03-18 19:19:34.602152"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"username"=>"Batman", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "Batman"]]
+Redirected to http://test.host/users/215
+Completed 302 Found in 91ms (ActiveRecord: 0.7ms)
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 215]]
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.8ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$R3gIYRUBL/wfeyjr2y88D.rhwMKdkJ3XC4aBHd0RNGrEvQbiRtDS2"], ["created_at", "2016-03-18 19:19:34.802256"], ["updated_at", "2016-03-18 19:19:34.802256"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"username"=>"Batman", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "Batman"]]
+Redirected to http://test.host/users/216
+Completed 302 Found in 90ms (ActiveRecord: 0.7ms)
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$J/OL16sL3XoEGcvIhxIONOm4BOFmu1MVlVWTL3PSdzfSunPckUWiO"], ["created_at", "2016-03-18 19:19:35.010219"], ["updated_at", "2016-03-18 19:19:35.010219"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by SessionsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/sessions/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.6ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$ZBmLJ/3fZLywKSLXIcv9heUa8GMeuVgm5sPfux9TOZX83PY9o4ZLy"], ["created_at", "2016-03-18 19:19:35.114209"], ["updated_at", "2016-03-18 19:19:35.114209"]]
+  [1m[35m (0.6ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by SessionsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/sessions/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "users"
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"Batman", "password"=>"[FILTERED]"}}
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$oa1QuA0SMkm5nUYD5R5.7.jCHg0UN7nc7HT0okD6LTgNt2Jd.kn4e"], ["created_at", "2016-03-18 19:19:35.261186"], ["updated_at", "2016-03-18 19:19:35.261186"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/users/219
+Completed 302 Found in 97ms (ActiveRecord: 1.5ms)
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"Batman", "password"=>"[FILTERED]"}}
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$qpejyqD5BDlYgBz0yQZdWeel3aAMaamdrUM0IA6oulCnTsN/nulWC"], ["created_at", "2016-03-18 19:19:35.368132"], ["updated_at", "2016-03-18 19:19:35.368132"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/users/220
+Completed 302 Found in 97ms (ActiveRecord: 1.4ms)
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 220]]
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 35ms (Views: 14.3ms | ActiveRecord: 6.3ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (1.3ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"Batman", "password"=>"[FILTERED]"}}
+  [1m[35m (0.5ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$gsHt84YfXzoWkcpLX1FOqu.GnzRUlE7fUxEKFrczPOyi2V.y4MIVq"], ["created_at", "2016-03-18 19:22:12.626900"], ["updated_at", "2016-03-18 19:22:12.626900"]]
+  [1m[35m (0.5ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/users/221
+Completed 302 Found in 105ms (ActiveRecord: 2.4ms)
+  [1m[36m (0.9ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.7ms)[0m  [1mBEGIN[0m
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"Batman", "password"=>"[FILTERED]"}}
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$aEBjf/xGKUaJ5eP88o//me4VA/RtGM1dnHU6qL.Mna04e6SFxgP6O"], ["created_at", "2016-03-18 19:22:12.741515"], ["updated_at", "2016-03-18 19:22:12.741515"]]
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/users/222
+Completed 302 Found in 97ms (ActiveRecord: 1.4ms)
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 222]]
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$YD22mh1qpiLMlCwppyeqUeeR6gZKL6XJGGlEIlxIAr8m3gHzGuIMi"], ["created_at", "2016-03-18 19:22:12.861743"], ["updated_at", "2016-03-18 19:22:12.861743"]]
+  [1m[36m (0.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by SessionsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/sessions/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$G3pb/58cjYeJflLher/xPuob4Obii9lDuWs4xyS3wbNEqVBInc/r2"], ["created_at", "2016-03-18 19:22:12.971997"], ["updated_at", "2016-03-18 19:22:12.971997"]]
+  [1m[35m (0.5ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by SessionsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/sessions/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.7ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"username"=>"Batman", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "Batman"]]
+  Rendered sessions/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 5ms (Views: 1.2ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$v2BDwH1c2nN61/ZXKfoIJeF.dxERsw0npwX0O8YWjfsZ65Q4IpYwa"], ["created_at", "2016-03-18 19:22:13.197168"], ["updated_at", "2016-03-18 19:22:13.197168"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"username"=>"Batman", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "Batman"]]
+Redirected to http://test.host/users/225
+Completed 302 Found in 93ms (ActiveRecord: 0.6ms)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 225]]
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$nLmit6J8fOgEOEPLlia6BeupXqSfmibGBc/IuAIEacaTHIft/acBy"], ["created_at", "2016-03-18 19:22:13.396432"], ["updated_at", "2016-03-18 19:22:13.396432"]]
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"username"=>"Batman", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "Batman"]]
+Redirected to http://test.host/users/226
+Completed 302 Found in 90ms (ActiveRecord: 0.6ms)
+  [1m[35m (0.5ms)[0m  ROLLBACK
