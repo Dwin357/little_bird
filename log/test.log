@@ -3716,3 +3716,796 @@ Processing by SessionsController#create as HTML
 Redirected to http://test.host/users/226
 Completed 302 Found in 90ms (ActiveRecord: 0.6ms)
   [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$9g68w3OqoyZ0o67lF2/ne.Xrv4XP6gROq2E74tEmjsSElG3kObEfi"], ["created_at", "2016-03-20 18:29:34.686270"], ["updated_at", "2016-03-20 18:29:34.686270"]]
+  [1m[36m (0.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$UgeTnvTIonVLjwV/aEnf4OhqrzGzCxU/.zXaL52nk/lxGhl3CO/Wq"], ["created_at", "2016-03-20 18:37:12.589449"], ["updated_at", "2016-03-20 18:37:12.589449"]]
+  [1m[36m (0.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 228]]
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$9ljebRAUM3Vjob9fZUD72egzbF5FvLBkG/7vdPK4q80camO6yl4im"], ["created_at", "2016-03-20 18:37:12.712529"], ["updated_at", "2016-03-20 18:37:12.712529"]]
+  [1m[36m (0.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$RUeJ5jwkyr5ZlWmQGwIkjudXN3rLgUCEsLOObkfuYY0Qx/hPRkF1e"], ["created_at", "2016-03-20 18:37:25.054328"], ["updated_at", "2016-03-20 18:37:25.054328"]]
+  [1m[36m (0.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.7ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$jSiHXq2gkqK67zpwXvrbPeCnoVQPK7EroEjrnFf3mM5umghFrt.Va"], ["created_at", "2016-03-20 18:37:25.164590"], ["updated_at", "2016-03-20 18:37:25.164590"]]
+  [1m[35m (0.5ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 231]]
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$Sxzd3cudlBjl4gPwmQvRIuInJn2ukxDdiIK2U4P3n6LpMH1UAUxbK"], ["created_at", "2016-03-20 18:39:07.387594"], ["updated_at", "2016-03-20 18:39:07.387594"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$RYTnBqQ/6TJueVGdTGeAHeUAqswGVvemhDnsvuq8spZ3P9Lpj5tNW"], ["created_at", "2016-03-20 18:39:07.502310"], ["updated_at", "2016-03-20 18:39:07.502310"]]
+  [1m[36m (0.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 233]]
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$50iuUrt2deY6q5LWkcRgM.oRIHv8Nb5NMsmc7GHDk8fuX.3MTZc0u"], ["created_at", "2016-03-20 18:39:07.611331"], ["updated_at", "2016-03-20 18:39:07.611331"]]
+  [1m[36m (0.6ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.7ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$g7tH0pC5afgiZcuiKnuX0epQlYbjt7YopJBmsZ7dhJV/1wD/8qbmq"], ["created_at", "2016-03-20 18:39:21.640684"], ["updated_at", "2016-03-20 18:39:21.640684"]]
+  [1m[36m (0.6ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 235]]
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$rGcqvyOMVMJTCgubqOYCbOXIIJk/iLjYP8fbmVVROOPS1GryRS5.u"], ["created_at", "2016-03-20 18:39:21.765410"], ["updated_at", "2016-03-20 18:39:21.765410"]]
+  [1m[36m (0.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.8ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$U0RVVFO3MYJkYjAOPldaq.vn6wRVO5eIS7ZDVkP5PSF5xlr.RriC."], ["created_at", "2016-03-20 18:39:21.899361"], ["updated_at", "2016-03-20 18:39:21.899361"]]
+  [1m[36m (0.6ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$yGD0AT8WKef6WGUIRcXERuZ6SayEEGhHTBEcT5btiAa7CFSH8YDYu"], ["created_at", "2016-03-20 18:43:26.077902"], ["updated_at", "2016-03-20 18:43:26.077902"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 238]]
+  [1m[36m (1.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$s8aoYHpqYUI32ujz04rF9urC3TNFi1TncG9lY1bLXHffbgcjnZMH6"], ["created_at", "2016-03-20 18:43:26.199112"], ["updated_at", "2016-03-20 18:43:26.199112"]]
+  [1m[36m (0.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$lbslvLXSTNmoYaG3nQMlUueN7uI9Yk5uMCONBtwWe9/YuFNh38MtS"], ["created_at", "2016-03-20 18:43:26.308077"], ["updated_at", "2016-03-20 18:43:26.308077"]]
+  [1m[36m (0.6ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$KVN6dV4.KYcX0MTjtJ//xOyVm0d91ruDFWmDpAr5e2E59ZAvU6bB."], ["created_at", "2016-03-20 18:43:26.406086"], ["updated_at", "2016-03-20 18:43:26.406086"]]
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", nil]]
+  [1m[35m (0.7ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$OxALFKsM3Ncy.NauORy/x.YNc0R7khpsXqSKj8UJ1cca8ypQpcUsu"], ["created_at", "2016-03-20 18:45:16.225907"], ["updated_at", "2016-03-20 18:45:16.225907"]]
+  [1m[36m (0.6ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", nil]]
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$WMZ4aEMLvjbIozAcjFOgs./hiVHNL5zoid/QDPcnQd9K0lXO4SNba"], ["created_at", "2016-03-20 18:45:16.377715"], ["updated_at", "2016-03-20 18:45:16.377715"]]
+  [1m[36m (0.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 243]]
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.8ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$MiMJHYxq4iQzi/ASatByn.eNG0ucyRvmK1G/h6waRPDktvwxj3Fmu"], ["created_at", "2016-03-20 18:45:16.485661"], ["updated_at", "2016-03-20 18:45:16.485661"]]
+  [1m[36m (0.6ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$diVGdE/HdByIeWBOTgACRenz6YPoxt7uLv1.B8uyDvmIB2tql.N5u"], ["created_at", "2016-03-20 18:45:16.589130"], ["updated_at", "2016-03-20 18:45:16.589130"]]
+  [1m[36m (0.6ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$j2XzFt4CWdY0IfUyO76UvuqsKgLU0xYMp/Pg90qD1xXz0cTQwpct."], ["created_at", "2016-03-20 18:46:28.113401"], ["updated_at", "2016-03-20 18:46:28.113401"]]
+  [1m[36m (0.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$mi.00LzyxpJKUen7QTz90eK/aTjdtRYwzf63plVaygd4kMRBdI.ue"], ["created_at", "2016-03-20 18:46:28.221474"], ["updated_at", "2016-03-20 18:46:28.221474"]]
+  [1m[35m (0.5ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 247]]
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.6ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$ZiIlNKFv11hEP9vAGDhNjOKdWRcWAeEn6/DLXqtsVv4LSJnPpuK1S"], ["created_at", "2016-03-20 18:46:28.332651"], ["updated_at", "2016-03-20 18:46:28.332651"]]
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$H2iXeaecPDn.Gx/79VgFueatJ6kn7kUt.Bcr3Db4bpoOL0FK44YIq"], ["created_at", "2016-03-20 18:46:28.432789"], ["updated_at", "2016-03-20 18:46:28.432789"]]
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$gyT.y4FwN7AhIVz85fC22uQ4qHTrW0j0uTx6n.tlJXni83swr2aSS"], ["created_at", "2016-03-20 18:48:30.142633"], ["updated_at", "2016-03-20 18:48:30.142633"]]
+  [1m[36m (0.6ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$tDorfbvbrU8DIFzXJ0VNROkzH2xiXDw5B.OmGZrxuafQr4QcYl1Rm"], ["created_at", "2016-03-20 18:48:30.258442"], ["updated_at", "2016-03-20 18:48:30.258442"]]
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", nil]]
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.6ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$17vP2nI2dHswTRadrLshgeuFEfFXOv62inaGfUtNLGVjTOj1hsTMG"], ["created_at", "2016-03-20 18:48:30.372937"], ["updated_at", "2016-03-20 18:48:30.372937"]]
+  [1m[35m (0.5ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 252]]
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$DPol3q.0Tg0OBnxL0nGIv.Uo6FODnMcjUBsNha3E4KICBPwnS6I7C"], ["created_at", "2016-03-20 18:48:30.473777"], ["updated_at", "2016-03-20 18:48:30.473777"]]
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$1AF8j8uWn/zVWhniFpa8mO0r0QFukqfB2AMEu0SakRpLbB4KRWuOS"], ["created_at", "2016-03-20 18:50:05.961245"], ["updated_at", "2016-03-20 18:50:05.961245"]]
+  [1m[36m (0.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", nil]]
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$OoV5OpBr6q05AWOfYK/4Xe.aq8F2MX4uduKva5rKLuOP2j6XYmysC"], ["created_at", "2016-03-20 18:50:06.082374"], ["updated_at", "2016-03-20 18:50:06.082374"]]
+  [1m[36m (0.6ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 255]]
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$Q0Hf4HR5UEKO5VsGm.fs0.pPGhI2CENqNjEePvva8D3vg307ilOuK"], ["created_at", "2016-03-20 18:50:06.220016"], ["updated_at", "2016-03-20 18:50:06.220016"]]
+  [1m[36m (0.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.7ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$gqpwNyaTYmPtbp8eAYlrPeAFk5hrWDK8VgufNGaVDtxmsgpPxLAxK"], ["created_at", "2016-03-20 18:50:06.318697"], ["updated_at", "2016-03-20 18:50:06.318697"]]
+  [1m[35m (0.5ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 257]]
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$vIU1Qx44XsNCi.sUZNWWrufkSn3RaWeg4LCFXQUBeqFjbLI2dlOMS"], ["created_at", "2016-03-20 18:50:06.420172"], ["updated_at", "2016-03-20 18:50:06.420172"]]
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$vVkQyHStpOkaM0/yGiP9zuvxnBuonhr26q6Y8AOuBWTSVKXCV8D8W"], ["created_at", "2016-03-20 18:50:26.410368"], ["updated_at", "2016-03-20 18:50:26.410368"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", nil]]
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.8ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$766LoVwstlevukFivM0AmO/kWDiPruhxkXOPuMNsitBxkUbQ.xTT6"], ["created_at", "2016-03-20 18:50:26.527806"], ["updated_at", "2016-03-20 18:50:26.527806"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 260]]
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$GIFTUQOxd3OIt6sua50AO.6GfDRr8DQQcGAcQNs0U50SY4GfTGIXa"], ["created_at", "2016-03-20 18:50:26.631752"], ["updated_at", "2016-03-20 18:50:26.631752"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 261]]
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$8FI.IDo6QigMKt6IWHALIujSQ.4KuGPybJzlxj48Oe2wLM9KhhaJG"], ["created_at", "2016-03-20 18:50:26.731961"], ["updated_at", "2016-03-20 18:50:26.731961"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$cgcp5nHatSFx/4sD7XtRM.EMSCZKvXtceIKJ6pAACPi/1LMZLnLxC"], ["created_at", "2016-03-20 18:50:26.832098"], ["updated_at", "2016-03-20 18:50:26.832098"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.8ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$Yxhjki3/w31expmgBX/5rOZnoD8Dwbj1BDZhfO11PYoprEoAnwkGO"], ["created_at", "2016-03-20 18:56:07.642155"], ["updated_at", "2016-03-20 18:56:07.642155"]]
+  [1m[36m (0.6ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", nil]]
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$FI2gtq.WrNBkRYAgAuK2SOji2WAV2EblXZOrFWIdQ3K8Hqdos75L2"], ["created_at", "2016-03-20 18:56:07.763411"], ["updated_at", "2016-03-20 18:56:07.763411"]]
+  [1m[36m (0.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 265]]
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$RRqCfSxYEKaj7cM/9T3PNODx5FTCgwanK13gk4tE8wyp27.Q6WmEG"], ["created_at", "2016-03-20 18:56:07.872516"], ["updated_at", "2016-03-20 18:56:07.872516"]]
+  [1m[36m (0.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$AwMADz1nu8173O3oonPote3ZMcrnDuHdP1hVZN88fgy5.6OPNnote"], ["created_at", "2016-03-20 18:56:07.971124"], ["updated_at", "2016-03-20 18:56:07.971124"]]
+  [1m[35m (0.6ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$xcY93erWRteJW29TVyPqneZl7dFZegrgT6ItlUJrmkYEVrmHMnTL6"], ["created_at", "2016-03-20 18:56:08.073588"], ["updated_at", "2016-03-20 18:56:08.073588"]]
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 268]]
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$1oHWnOxTmwKZ7Ts59.7RoOE7Tiy.zY34OgtdmzY53UN5ReSZMJcRG"], ["created_at", "2016-03-20 18:56:08.174939"], ["updated_at", "2016-03-20 18:56:08.174939"]]
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$HXUqn9bQpXEPEIp/1IG3.OIDrjvVrzGi2U6sGxJgtBKkRIhoZvGPG"], ["created_at", "2016-03-20 18:56:33.439572"], ["updated_at", "2016-03-20 18:56:33.439572"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 270]]
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$Cmpf4gVNhvCbcTUrxeSuCePSPnDuUHvpLSOnbMJTIoaxqBkCMdN2C"], ["created_at", "2016-03-20 18:56:33.560139"], ["updated_at", "2016-03-20 18:56:33.560139"]]
+  [1m[36m (0.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", nil]]
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$/u/S3YlElkaOKEwZs4PaheUaALL0tEhnw01m0BS16pG9jOsQ3eN.y"], ["created_at", "2016-03-20 18:56:33.661623"], ["updated_at", "2016-03-20 18:56:33.661623"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$0Hj7ij3a.CvdILAJtB3X2OmqVfnrf4Y9FmdvcygJe/gyxa2Xpwh/K"], ["created_at", "2016-03-20 18:56:33.761306"], ["updated_at", "2016-03-20 18:56:33.761306"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 273]]
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$PlFTm.uY2Q5SEzyo9dJra.qNOdYsNN7YwqWcZ.4cNTEhJ7a6rbesi"], ["created_at", "2016-03-20 18:56:33.861788"], ["updated_at", "2016-03-20 18:56:33.861788"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.8ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$bEhNPXISuWRkvmhDSTH52uBksheOSzvQiUWZ6o561mQrdy3nnn1VS"], ["created_at", "2016-03-20 18:56:33.960014"], ["updated_at", "2016-03-20 18:56:33.960014"]]
+  [1m[35m (0.7ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$YfvCYsexRL42GWNOxf0YLuSZOqqvZBvhkJac0eqjSchsOT5qYKLqq"], ["created_at", "2016-03-20 19:00:06.364950"], ["updated_at", "2016-03-20 19:00:06.364950"]]
+  [1m[36m (0.6ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$2SwdrDEp4ZCJAc5I6y3o9.H27fvAbBFGiag4DAaVlq60zutYzDNdC"], ["created_at", "2016-03-20 19:00:06.473061"], ["updated_at", "2016-03-20 19:00:06.473061"]]
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.8ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$ZpKjQIJ6WfrSgXrB15tEw.1qwlJnCcBMXNgmKjtgsxq61583772Ui"], ["created_at", "2016-03-20 19:00:06.571541"], ["updated_at", "2016-03-20 19:00:06.571541"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36m (0.8ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$/SLYcu1LXxH2/m1B2B7REOZIhExSXIyY6xEwEweZEjWzAbvK47/IK"], ["created_at", "2016-03-20 19:00:06.680324"], ["updated_at", "2016-03-20 19:00:06.680324"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 279]]
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.7ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$e1IlIUSd50U7e98tuZcYg.rhZgT2jiKL8BGm910EA/jydXpvVBD3e"], ["created_at", "2016-03-20 19:00:06.783576"], ["updated_at", "2016-03-20 19:00:06.783576"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 280]]
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$gD.1xpSXYKGvNyXBDl6AheJeCXMgRCRig8n3jDGKuX1DHuq8voMi."], ["created_at", "2016-03-20 19:00:06.883442"], ["updated_at", "2016-03-20 19:00:06.883442"]]
+  [1m[36m (0.6ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", nil]]
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$JltEU1/JVFKMAooEWcJ/9uz3U1uIcSk.nFr7WxhWhedI4NNqwv74a"], ["created_at", "2016-03-20 19:00:06.986563"], ["updated_at", "2016-03-20 19:00:06.986563"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$JOKyjmAs5JqzivINZinHcu8Q4tpwjDZ5B7/JhPHFXS0BVil7jTEZ6"], ["created_at", "2016-03-20 19:47:52.144181"], ["updated_at", "2016-03-20 19:47:52.144181"]]
+  [1m[36m (0.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 283]]
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$v/sBQz0yqUkW0IwRIYpYs.KkMG7/ZyGm6cRO2Bd3icP.trRqNvTTC"], ["created_at", "2016-03-20 19:47:52.266999"], ["updated_at", "2016-03-20 19:47:52.266999"]]
+  [1m[36m (0.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 284]]
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.7ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$h0dOehEaXMNczj8pIuvFr.CapI.FI0EhfTF3Sy7kHFJ0tB54DhJI6"], ["created_at", "2016-03-20 19:47:52.389187"], ["updated_at", "2016-03-20 19:47:52.389187"]]
+  [1m[36m (0.6ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$FSF/cAzgyoLIMtV4yndUhO5OUQNUy0bHfOPJesPrL0YHy57WNgiE6"], ["created_at", "2016-03-20 19:47:52.490195"], ["updated_at", "2016-03-20 19:47:52.490195"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", nil]]
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$8xLU2zepUSO.tjrhP8rshOy/6ouH4AVxngBIQNZfUvPnz4uv6lrNK"], ["created_at", "2016-03-20 19:47:52.592199"], ["updated_at", "2016-03-20 19:47:52.592199"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 287]]
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$xou5ZVlXCR10q0YY0AZIdeTlQyk5EaCoJO6XwVzvkoY2Z5/R6hqz6"], ["created_at", "2016-03-20 19:47:52.691778"], ["updated_at", "2016-03-20 19:47:52.691778"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.8ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$xtvdN15M5p02ibthL.bEuOtGdT3YtuyJSJffBsN5WAPTTF4Wsg4ey"], ["created_at", "2016-03-20 19:47:52.790675"], ["updated_at", "2016-03-20 19:47:52.790675"]]
+  [1m[35m (0.7ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.0ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$M7jeNRekQDztzzhjQRLttOu6UWPZkargwoaHDx7.qVapl/4f0HxJC"], ["created_at", "2016-03-20 19:48:28.897462"], ["updated_at", "2016-03-20 19:48:28.897462"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 290]]
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$38BViUOYvpFXGQqz7YuVAuny7gjokd.1QDli.zLWrRAmtJFMVLhem"], ["created_at", "2016-03-20 19:48:29.049169"], ["updated_at", "2016-03-20 19:48:29.049169"]]
+  [1m[36m (0.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$.Bm4PWW/xz4eVtCVk4p8GueSWwsaY7Tr1L6AboZE66CedmXFbw8Zq"], ["created_at", "2016-03-20 19:48:29.168534"], ["updated_at", "2016-03-20 19:48:29.168534"]]
+  [1m[36m (0.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 292]]
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$RIknvDVuqhW6zMMOWT15w.H1S9nbwKdCUYoGs7UsthwJlgt1521/e"], ["created_at", "2016-03-20 19:48:29.270091"], ["updated_at", "2016-03-20 19:48:29.270091"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", nil]]
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$slDdmdz18.eMPIUBsO7kmeyi.Dk113UISPzowD6SGMZkfcJv05jkS"], ["created_at", "2016-03-20 19:48:29.371498"], ["updated_at", "2016-03-20 19:48:29.371498"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 294]]
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$ZaoJe3YZL.Xyui0LBz6JY.XEIrcujn.uqR4GhbVLDlY6gJ/6eF9WK"], ["created_at", "2016-03-20 19:48:29.470364"], ["updated_at", "2016-03-20 19:48:29.470364"]]
+  [1m[36m (0.6ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$HYV0tGny41FzdR6KbfzQKe2YqYaBG3I3iGek1rSlYSKjAqjgZFowO"], ["created_at", "2016-03-20 19:48:29.570115"], ["updated_at", "2016-03-20 19:48:29.570115"]]
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$2jE9itu2yCyaVU8ysm4Ay.IWn04nA8/ulsxsxqMRU6vkSMJOOwJsC"], ["created_at", "2016-03-20 19:48:56.221452"], ["updated_at", "2016-03-20 19:48:56.221452"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.6ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$Y6Q2W3DtXlpWMVlQ5z0C0OQD9ZE.YcZ./0xVr8vHyhw7QG9fbPRB."], ["created_at", "2016-03-20 19:48:56.329746"], ["updated_at", "2016-03-20 19:48:56.329746"]]
+  [1m[35m (0.6ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$HKcrRl3KltA05JkCfsGLhuW6RPNGzCAghi7/V3MyJWHyck.ka900G"], ["created_at", "2016-03-20 19:48:56.442215"], ["updated_at", "2016-03-20 19:48:56.442215"]]
+  [1m[35m (0.7ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 299]]
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$t1HJ2meptfIOQR1yG6wK6uOvEawSWx8fzVLDXSOYbY4GoQE11ZVVe"], ["created_at", "2016-03-20 19:48:56.578580"], ["updated_at", "2016-03-20 19:48:56.578580"]]
+  [1m[35m (0.5ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 300]]
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.8ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$XFbH/GD5FnKZyrz1bHZdSud3T9rTudU1Qe9xwVgZ3TAi.tP8IJkUy"], ["created_at", "2016-03-20 19:48:56.679849"], ["updated_at", "2016-03-20 19:48:56.679849"]]
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$3abHH4H0Odyq2L/XaYxGculBBlelfcfczTQITbPjFB/AkTR5MBybq"], ["created_at", "2016-03-20 19:48:56.778480"], ["updated_at", "2016-03-20 19:48:56.778480"]]
+  [1m[36m (0.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", nil]]
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$07FKNzQqzFa2WyTUGfsaVeBCIV4oczwXD6Gn7JTdjhzoLJm06UcLK"], ["created_at", "2016-03-20 19:48:56.881064"], ["updated_at", "2016-03-20 19:48:56.881064"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 303]]
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$Sj43wZz/X/qocRr8HvwzuOC3XNvepUWQ9OmXf.WkUe.nZAGO8Rwpe"], ["created_at", "2016-03-20 19:50:42.444735"], ["updated_at", "2016-03-20 19:50:42.444735"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 304]]
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.7ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$UiiuNUTIp10sSZRrGxoZN.usjLYDPrupo9dy4bicAZrahvwL6syIq"], ["created_at", "2016-03-20 19:50:42.601431"], ["updated_at", "2016-03-20 19:50:42.601431"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36m (0.8ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$L5f1tRBfGnCwbKCfoHCSoefBO7dJF.J1NTEPfynCudTkPMozdhNLm"], ["created_at", "2016-03-20 19:50:42.701548"], ["updated_at", "2016-03-20 19:50:42.701548"]]
+  [1m[36m (0.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 306]]
+  [1m[36m (0.9ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$iItQ.PH7RPNi2HALZV8uoe9Dio7f2jLZ7GaFRHPlMh5wmQJBbeu.W"], ["created_at", "2016-03-20 19:50:42.803603"], ["updated_at", "2016-03-20 19:50:42.803603"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.7ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$lHbsxzvQZsE2MyTyhpJTT.OmYUf46naylstAlvdOL0jnYpMOtH.32"], ["created_at", "2016-03-20 19:50:42.902232"], ["updated_at", "2016-03-20 19:50:42.902232"]]
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$daf45KOV.F0mFEQRNtf8oOObVHlBebTLyGmdiRHF.Aq3StvVCbYWa"], ["created_at", "2016-03-20 19:50:43.000196"], ["updated_at", "2016-03-20 19:50:43.000196"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 309]]
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$qXHk4tD0jBMDGA54nFyWEup9DvQRWv/uxSr50SO5xP3XkbaCqtRDW"], ["created_at", "2016-03-20 19:50:43.099372"], ["updated_at", "2016-03-20 19:50:43.099372"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", nil]]
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.8ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$lirGb/sCxw31rKDBpIqGh.WCAQ1Po4yNusEn/EWl1Fz6DhmTRrfLC"], ["created_at", "2016-03-20 19:50:43.199929"], ["updated_at", "2016-03-20 19:50:43.199929"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.7ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$NWEeYr2VkPSJgmszvMNSZeMM1HMwTV2X4aIrS2/BwLbfXNE57BdvG"], ["created_at", "2016-03-20 19:53:20.490243"], ["updated_at", "2016-03-20 19:53:20.490243"]]
+  [1m[36m (0.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.7ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$A1ibhLjRdKoDkNjcWSOdJOa5Je6MFI7aFBMW0e7oi8lDIGVfcsbYm"], ["created_at", "2016-03-20 19:53:20.600778"], ["updated_at", "2016-03-20 19:53:20.600778"]]
+  [1m[35m (0.5ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$0BvZnCsOoQoY.XLmT/HcWuS//N5CIFMKL2Fj./91QNAl2l1qHn.a."], ["created_at", "2016-03-20 19:53:20.703821"], ["updated_at", "2016-03-20 19:53:20.703821"]]
+  [1m[36m (0.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 314]]
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.8ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$V3yu8XUSCM4G.WFkfiRmxu3BzfQcuDgvxlPC6wcyPfgOZDe2RcCtG"], ["created_at", "2016-03-20 19:53:20.824841"], ["updated_at", "2016-03-20 19:53:20.824841"]]
+  [1m[36m (0.7ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", nil]]
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$ip1ez77TtPxAjDTjgZDbqOpKRQrhd7Kz7UZhtDKC4/SkO/24.vQEq"], ["created_at", "2016-03-20 19:53:20.926484"], ["updated_at", "2016-03-20 19:53:20.926484"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$f4UCyDrT5mCbv36N0JEOmeObYgAafnaiAyPjYkQSFm1WhCoW2znSi"], ["created_at", "2016-03-20 19:53:21.056407"], ["updated_at", "2016-03-20 19:53:21.056407"]]
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 317]]
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$7aHqyXZmky3oT04hLE3SwOMtY..HuYoJ0IS26/R4CHdJX81Qmp.GW"], ["created_at", "2016-03-20 19:53:21.156775"], ["updated_at", "2016-03-20 19:53:21.156775"]]
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$TJpg2gwrrHqWe/lzQfDJA.SJqh4XSYjMWCHUpLXRexnQYk/xy9wz2"], ["created_at", "2016-03-20 19:53:21.255538"], ["updated_at", "2016-03-20 19:53:21.255538"]]
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 319]]
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$8IfmaKPjNk1L.FAx5t0jHOCeOL.9QODcnxcP8I1FFdlZoQ1VzYTV6"], ["created_at", "2016-03-20 19:53:51.595568"], ["updated_at", "2016-03-20 19:53:51.595568"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$05x9nNAxk8Vp0SQevs8rLuqfjizdhMjDVmC8zaLYFlZ9RhksNHKT2"], ["created_at", "2016-03-20 19:53:51.704187"], ["updated_at", "2016-03-20 19:53:51.704187"]]
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$CzRsUHSdpqnATf6Rusim8.R/m5SLJY5223n7zuWKXPY/ulz/EjtJm"], ["created_at", "2016-03-20 19:53:51.803395"], ["updated_at", "2016-03-20 19:53:51.803395"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 322]]
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.8ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$rrFyuRnr.i4KcMR5hctp9eqHHJryhGkttrGk36MRrvBY.zWyA6u.G"], ["created_at", "2016-03-20 19:53:51.915433"], ["updated_at", "2016-03-20 19:53:51.915433"]]
+  [1m[36m (0.7ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", nil]]
+  [1m[36m (0.9ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$/QWrKLD7D8f5gaSr5edxeOl4YxCH4QSHFY1qIZBrUn4x048vovCq2"], ["created_at", "2016-03-20 19:53:52.017676"], ["updated_at", "2016-03-20 19:53:52.017676"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 324]]
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$s/pm8H2RzgX3p28mMDXkiOoKWKKxCsAcNjRRKVxAO1jphpOSxCEHO"], ["created_at", "2016-03-20 19:53:52.117054"], ["updated_at", "2016-03-20 19:53:52.117054"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 325]]
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$H/EHogNnVcqQlnCVw3Z.auVDGYB19Nw2zSc6xEhczpw7MHiOxiVl."], ["created_at", "2016-03-20 19:53:52.217045"], ["updated_at", "2016-03-20 19:53:52.217045"]]
+  [1m[36m (0.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.7ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$0kuYRKtuY9r.51Okdv1tRejJb6w.yt9bvo8D5xP0s0h005tJb7QC."], ["created_at", "2016-03-20 19:53:52.315909"], ["updated_at", "2016-03-20 19:53:52.315909"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 327]]
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (0.7ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$e9rEx7M68zz6dCbcUpT/0uBG43eDhfB.jp9fF1lK.70l5EyMDSswe"], ["created_at", "2016-03-20 19:55:25.470334"], ["updated_at", "2016-03-20 19:55:25.470334"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 328]]
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$V7uOISslaK2LSnMLz2okvelA/cut9bL7MukVN2xLJdDEptLHDpbJu"], ["created_at", "2016-03-20 19:55:25.590627"], ["updated_at", "2016-03-20 19:55:25.590627"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$5ojznPQwlwrdgAW4JOCrPeG0uCI8XErXxngTPXxI/2HQL2vQypCKC"], ["created_at", "2016-03-20 19:55:25.690302"], ["updated_at", "2016-03-20 19:55:25.690302"]]
+  [1m[36m (0.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 330]]
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$/OReM4E9Ch3ejzwLBrK19uwdctQq2ALA7.HTOHkzvbfKfng1676oi"], ["created_at", "2016-03-20 19:55:25.790899"], ["updated_at", "2016-03-20 19:55:25.790899"]]
+  [1m[36m (0.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$Zw9oGVvIlFbXhn36jGbSMOIq3K9LIG5U1/4h2ksXICu/YKRjVrW/."], ["created_at", "2016-03-20 19:55:25.888357"], ["updated_at", "2016-03-20 19:55:25.888357"]]
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", nil]]
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.7ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$X/bkNTmAL7Kn/QMlliZKpO2a8ZCaZO4VUUtzRxcyL.YQyB4ifhlxS"], ["created_at", "2016-03-20 19:55:25.989836"], ["updated_at", "2016-03-20 19:55:25.989836"]]
+  [1m[35m (0.7ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 333]]
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$v6KyFV1jS79I/gLDaBCDKuVB1LqvZgX/4iKo2JfbxwUc8AvuzQ/ya"], ["created_at", "2016-03-20 19:55:26.088862"], ["updated_at", "2016-03-20 19:55:26.088862"]]
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 334]]
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$axl58U/1Lbrr6iKh2S8EHOTZosU5DpCcBvjLglADyvQYyn8z1mG3i"], ["created_at", "2016-03-20 19:55:26.188223"], ["updated_at", "2016-03-20 19:55:26.188223"]]
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.7ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.7ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$AKco0H/kyF4GD3WxTPKxnOmdBFVA1XYpuvvgm9QoilBzPjf7SdLE."], ["created_at", "2016-03-20 19:58:25.049734"], ["updated_at", "2016-03-20 19:58:25.049734"]]
+  [1m[36m (0.6ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 336]]
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.8ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$sFqDHUUTYW7GoxIDha3wvu0S57W3rkPGbNKCcOmFjTgxxYIb6Dk4m"], ["created_at", "2016-03-20 19:58:25.169307"], ["updated_at", "2016-03-20 19:58:25.169307"]]
+  [1m[36m (0.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", nil]]
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$YGFYPgpO8Tu9eCsik29pBOdJwg6DL5KCAY9cLoq8DPkvT5Lo6MfRG"], ["created_at", "2016-03-20 19:58:25.271320"], ["updated_at", "2016-03-20 19:58:25.271320"]]
+  [1m[36m (0.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 338]]
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$qJu/yML89njTIEe87lA6Ue5H2yysq3gJxzsc0dOVCp9aGyU3fi2sO"], ["created_at", "2016-03-20 19:58:25.370971"], ["updated_at", "2016-03-20 19:58:25.370971"]]
+  [1m[36m (0.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 339]]
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$fUV0fkA3r/zPcw8CtAZGRe70CtPjSezSi.VYFyMNehr2f5erODq/O"], ["created_at", "2016-03-20 19:58:25.470281"], ["updated_at", "2016-03-20 19:58:25.470281"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$Euz0OoUwiGsF48/Cb3sGYuOWfYMWo04Oj3VAHC4BMXTOXU.QYYtLe"], ["created_at", "2016-03-20 19:58:25.569983"], ["updated_at", "2016-03-20 19:58:25.569983"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 341]]
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$aCBfuHIZTww5sTsFQm8jx.sbt1RTR2msN0Y4x/9j8dPJ4YdFbxdtW"], ["created_at", "2016-03-20 19:58:25.668971"], ["updated_at", "2016-03-20 19:58:25.668971"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$YpH/yeV0yCRbQ913zidbEOi9wuJBlJ1X7/tGuG92dNusy8xBcLYti"], ["created_at", "2016-03-20 19:58:25.770754"], ["updated_at", "2016-03-20 19:58:25.770754"]]
+  [1m[35m (0.7ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$/Qvk.rV1y2Zrk4SeWyHdouPTOJYpJMWEBh0Ey.dVJJTn.BURkvHpy"], ["created_at", "2016-03-20 20:01:36.582477"], ["updated_at", "2016-03-20 20:01:36.582477"]]
+  [1m[36m (0.6ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.7ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$d80fIVYZ/4OeHRTLcc8iQels/poPb5tIYH8EjQAYOgzi/C5TxsKxu"], ["created_at", "2016-03-20 20:01:36.696980"], ["updated_at", "2016-03-20 20:01:36.696980"]]
+  [1m[35m (0.5ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 345]]
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$C5CCUsbyrLvCQvT.vXRFi.F0diLW0t.ykiwjVroRKbkA9iM.mwAPa"], ["created_at", "2016-03-20 20:01:36.841069"], ["updated_at", "2016-03-20 20:01:36.841069"]]
+  [1m[35m (0.5ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$vr79OV.THSmL6FU303z1IuXRSZulFHMI5diI3Fwx4L7zxUzUYyKpK"], ["created_at", "2016-03-20 20:01:36.940154"], ["updated_at", "2016-03-20 20:01:36.940154"]]
+  [1m[36m (0.7ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 347]]
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.8ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$YJQMQPDQawTZ/XuhDszluOz359KDd43yEViZkMnUlhpX/46VNg7Se"], ["created_at", "2016-03-20 20:01:37.041053"], ["updated_at", "2016-03-20 20:01:37.041053"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 348]]
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$JKaYbwCSnmMDZm3YzQRlSOpXZXiW9l/eYpsQKkAN1PKide0sAUfy6"], ["created_at", "2016-03-20 20:01:37.140560"], ["updated_at", "2016-03-20 20:01:37.140560"]]
+  [1m[36m (0.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$SERuG5WhfDQnamJLrZ2a4.kL8QsQyJl1bZNkeewjVi6bemmOz7Lby"], ["created_at", "2016-03-20 20:01:37.241245"], ["updated_at", "2016-03-20 20:01:37.241245"]]
+  [1m[36m (0.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 350]]
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$eKiczNsMvZSTCkbQZLQKI./Vsk4EqeIUrRpT7ueIv0Al3XpgxjT2C"], ["created_at", "2016-03-20 20:01:37.340668"], ["updated_at", "2016-03-20 20:01:37.340668"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", nil]]
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$sUPwGnGzwiWM1jOXaJn80.pWdOXHHva8Q.BbesGNxPgnJUj.CG6pW"], ["created_at", "2016-03-20 20:01:37.440955"], ["updated_at", "2016-03-20 20:01:37.440955"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 352]]
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36m (0.8ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$EUvB9KEZkNPC2Cy0eBEqiOwABVWlO1f8kY1uHv6d5jNNC1KCKNxK."], ["created_at", "2016-03-20 20:02:07.981784"], ["updated_at", "2016-03-20 20:02:07.981784"]]
+  [1m[36m (0.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 353]]
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$SWUlLp0eH3ByVwg5J2Oa2e/OWzriRF/kX1wH6.yZ/M3.OG02QGM/S"], ["created_at", "2016-03-20 20:02:08.103698"], ["updated_at", "2016-03-20 20:02:08.103698"]]
+  [1m[36m (0.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.8ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$T0R6nYlIZ.YlqzvQSUotyu3UnkBL0Q4WxBNFx.IsmzB10iz0.7.YW"], ["created_at", "2016-03-20 20:02:08.205778"], ["updated_at", "2016-03-20 20:02:08.205778"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 355]]
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["username", "Batman"], ["password_hash", "$2a$10$Lwdtmca856TipYVF7ClOLu9ws.jFsdLZKHFsE6ec8L/NoalWyNUhW"], ["created_at", "2016-03-20 20:02:08.304572"], ["updated_at", "2016-03-20 20:02:08.304572"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$pT38Zmc5JosXvMR4/oCJq.rVBfsyNwT7YLto98Ih8pPNqsZ5uJFKO"], ["created_at", "2016-03-20 20:02:08.400588"], ["updated_at", "2016-03-20 20:02:08.400588"]]
+  [1m[35m (0.8ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 357]]
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (3.9ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$JsBJ/UNjJGDxYGOWdhHRXOuzb9wOFa.Tcyol/MYwnOAsjvOawTMWO"], ["created_at", "2016-03-20 20:02:08.503904"], ["updated_at", "2016-03-20 20:02:08.503904"]]
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 358]]
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$FQpo2wAiG.5L/amDyOfQDeDlunlMS.c3hwzgReTwpQsfPm7.pdLy6"], ["created_at", "2016-03-20 20:02:08.602613"], ["updated_at", "2016-03-20 20:02:08.602613"]]
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 359]]
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$ba8CBHpjO6aMOrls6Vh.MeM1sZU22I0kTvjZhOKp4DbIuB3XJ.AIq"], ["created_at", "2016-03-20 20:02:08.700787"], ["updated_at", "2016-03-20 20:02:08.700787"]]
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", nil]]
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Batman"], ["password_hash", "$2a$10$7oepC/q7lqCg0LMaH0a.0.02evBIiXr3uC9bPWjRgQtUdxfXarqQy"], ["created_at", "2016-03-20 20:02:08.802441"], ["updated_at", "2016-03-20 20:02:08.802441"]]
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
