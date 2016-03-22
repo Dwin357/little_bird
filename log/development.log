@@ -2732,3 +2732,1122 @@ Started GET "/assets/_assets/bootstrap-theme.min.css.map" for 127.0.0.1 at 2016-
 
 Started GET "/assets/_assets/bootstrap.min.css.map" for 127.0.0.1 at 2016-03-21 17:57:36 -0500
   [1m[36mUser Load (3.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 30]]
+
+
+Started GET "/" for ::1 at 2016-03-22 11:57:59 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (2.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RootController#new as HTML
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 17ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/sessions/new" for ::1 at 2016-03-22 11:57:59 -0500
+Processing by SessionsController#new as HTML
+  Rendered shared/_errors_display.html.erb (0.5ms)
+  Rendered sessions/_signin_form.html.erb (0.6ms)
+  Rendered sessions/new.html.erb within layouts/application (25.5ms)
+  Rendered shared/_navbar.html.erb (0.3ms)
+Completed 200 OK in 885ms (Views: 884.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/_assets/bootstrap-theme.min.self-6f2f4ae8073eeed25f7f4c1fe221c20b00fe8aea594a38fa55e240d6d6a2e51d.css?body=1" for ::1 at 2016-03-22 11:58:00 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.self-66fe84b79c6d5db31355296a8c9627d232721fe3ac3c31f3554ccc7e999279b6.css?body=1" for ::1 at 2016-03-22 11:58:00 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-22 11:58:00 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-22 11:58:00 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for ::1 at 2016-03-22 11:58:00 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-22 11:58:00 -0500
+
+
+Started GET "/assets/sessions_error_feedback.self-7448a925bd823c77904e617577c79588efbe97957a25d10e9b1eeb4db9a13d91.js?body=1" for ::1 at 2016-03-22 11:58:00 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-03-22 11:59:12 -0500
+Processing by UsersController#new as HTML
+  Rendered shared/_errors_display.html.erb (0.0ms)
+  Rendered users/_user_form.html.erb (38.3ms)
+  Rendered users/new.html.erb within layouts/application (41.4ms)
+  Rendered shared/_navbar.html.erb (0.0ms)
+Completed 200 OK in 68ms (Views: 58.9ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/assets/_assets/bootstrap-theme.min.css.map" for ::1 at 2016-03-22 11:59:18 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.css.map" for ::1 at 2016-03-22 11:59:18 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-03-22 12:17:37 -0500
+Processing by UsersController#new as HTML
+  Rendered shared/_errors_display.html.erb (0.0ms)
+  Rendered users/_user_form.html.erb (1.1ms)
+  Rendered users/new.html.erb within layouts/application (3.0ms)
+  Rendered shared/_navbar.html.erb (0.0ms)
+Completed 200 OK in 188ms (Views: 187.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/_assets/bootstrap-theme.min.self-6f2f4ae8073eeed25f7f4c1fe221c20b00fe8aea594a38fa55e240d6d6a2e51d.css?body=1" for ::1 at 2016-03-22 12:17:37 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-22 12:17:37 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.self-66fe84b79c6d5db31355296a8c9627d232721fe3ac3c31f3554ccc7e999279b6.css?body=1" for ::1 at 2016-03-22 12:17:37 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 12:17:37 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-22 12:17:37 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-22 12:17:37 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for ::1 at 2016-03-22 12:17:37 -0500
+
+
+Started GET "/assets/sessions_error_feedback.self-e86fe8d6d113aa3c81dd88bd51699ca29b7990283859467b8291100c9a9567fe.js?body=1" for ::1 at 2016-03-22 12:17:37 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 12:17:37 -0500
+
+
+Started GET "/assets/_assets/bootstrap-theme.min.css.map" for ::1 at 2016-03-22 12:17:37 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.css.map" for ::1 at 2016-03-22 12:17:37 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-03-22 12:17:51 -0500
+Processing by UsersController#new as HTML
+  Rendered shared/_errors_display.html.erb (0.0ms)
+  Rendered users/_user_form.html.erb (1.0ms)
+  Rendered users/new.html.erb within layouts/application (2.8ms)
+  Rendered shared/_navbar.html.erb (0.0ms)
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/_assets/bootstrap-theme.min.self-6f2f4ae8073eeed25f7f4c1fe221c20b00fe8aea594a38fa55e240d6d6a2e51d.css?body=1" for ::1 at 2016-03-22 12:17:51 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-22 12:17:51 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-22 12:17:51 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.self-66fe84b79c6d5db31355296a8c9627d232721fe3ac3c31f3554ccc7e999279b6.css?body=1" for ::1 at 2016-03-22 12:17:51 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-22 12:17:51 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 12:17:51 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for ::1 at 2016-03-22 12:17:51 -0500
+
+
+Started GET "/assets/sessions_error_feedback.self-e86fe8d6d113aa3c81dd88bd51699ca29b7990283859467b8291100c9a9567fe.js?body=1" for ::1 at 2016-03-22 12:17:51 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 12:17:51 -0500
+
+
+Started GET "/assets/_assets/bootstrap-theme.min.css.map" for ::1 at 2016-03-22 12:17:51 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.css.map" for ::1 at 2016-03-22 12:17:51 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-03-22 12:18:14 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#new as HTML
+  Rendered shared/_errors_display.html.erb (0.3ms)
+  Rendered users/_user_form.html.erb (19.9ms)
+  Rendered users/new.html.erb within layouts/application (27.3ms)
+  Rendered shared/_navbar.html.erb (0.3ms)
+Completed 200 OK in 514ms (Views: 495.0ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/assets/_assets/bootstrap-theme.min.self-6f2f4ae8073eeed25f7f4c1fe221c20b00fe8aea594a38fa55e240d6d6a2e51d.css?body=1" for ::1 at 2016-03-22 12:18:15 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.self-66fe84b79c6d5db31355296a8c9627d232721fe3ac3c31f3554ccc7e999279b6.css?body=1" for ::1 at 2016-03-22 12:18:15 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-22 12:18:15 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-22 12:18:15 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-22 12:18:15 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 12:18:15 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for ::1 at 2016-03-22 12:18:15 -0500
+
+
+Started GET "/assets/sessions_error_feedback.self-e86fe8d6d113aa3c81dd88bd51699ca29b7990283859467b8291100c9a9567fe.js?body=1" for ::1 at 2016-03-22 12:18:15 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 12:18:15 -0500
+
+
+Started GET "/assets/_assets/bootstrap-theme.min.css.map" for ::1 at 2016-03-22 12:18:15 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.css.map" for ::1 at 2016-03-22 12:18:15 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-03-22 12:19:34 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#new as HTML
+  Rendered shared/_errors_display.html.erb (0.3ms)
+  Rendered users/_user_form.html.erb (22.1ms)
+  Rendered users/new.html.erb within layouts/application (29.8ms)
+  Rendered shared/_navbar.html.erb (0.4ms)
+Completed 200 OK in 575ms (Views: 560.6ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/_assets/bootstrap-theme.min.self-6f2f4ae8073eeed25f7f4c1fe221c20b00fe8aea594a38fa55e240d6d6a2e51d.css?body=1" for ::1 at 2016-03-22 12:19:35 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-22 12:19:35 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.self-66fe84b79c6d5db31355296a8c9627d232721fe3ac3c31f3554ccc7e999279b6.css?body=1" for ::1 at 2016-03-22 12:19:35 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-22 12:19:35 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-22 12:19:35 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 12:19:35 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for ::1 at 2016-03-22 12:19:35 -0500
+
+
+Started GET "/assets/sessions_error_feedback.self-90f35f9d5f3d143e77edc646e05232d2af29bca1699a8d8fca6361db882f4201.js?body=1" for ::1 at 2016-03-22 12:19:35 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 12:19:35 -0500
+
+
+Started GET "/assets/_assets/bootstrap-theme.min.css.map" for ::1 at 2016-03-22 12:19:35 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.css.map" for ::1 at 2016-03-22 12:19:35 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-03-22 12:23:56 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#new as HTML
+  Rendered shared/_errors_display.html.erb (0.4ms)
+  Rendered users/_user_form.html.erb (21.1ms)
+  Rendered users/new.html.erb within layouts/application (28.9ms)
+  Rendered shared/_navbar.html.erb (0.4ms)
+Completed 200 OK in 380ms (Views: 363.9ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/assets/_assets/bootstrap-theme.min.self-6f2f4ae8073eeed25f7f4c1fe221c20b00fe8aea594a38fa55e240d6d6a2e51d.css?body=1" for ::1 at 2016-03-22 12:23:56 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.self-66fe84b79c6d5db31355296a8c9627d232721fe3ac3c31f3554ccc7e999279b6.css?body=1" for ::1 at 2016-03-22 12:23:56 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-22 12:23:56 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-22 12:23:56 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-22 12:23:56 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 12:23:56 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for ::1 at 2016-03-22 12:23:56 -0500
+
+
+Started GET "/assets/sessions_error_feedback.self-82eeb7a4632e03222a31d5dfa314245fbfe4f9de99f01a0fe5005c5999867c09.js?body=1" for ::1 at 2016-03-22 12:23:56 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 12:23:56 -0500
+
+
+Started GET "/assets/_assets/bootstrap-theme.min.css.map" for ::1 at 2016-03-22 12:23:56 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.css.map" for ::1 at 2016-03-22 12:23:56 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-03-22 12:23:57 -0500
+Processing by UsersController#new as HTML
+  Rendered shared/_errors_display.html.erb (0.0ms)
+  Rendered users/_user_form.html.erb (1.5ms)
+  Rendered users/new.html.erb within layouts/application (3.7ms)
+  Rendered shared/_navbar.html.erb (0.1ms)
+Completed 200 OK in 21ms (Views: 20.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/_assets/bootstrap-theme.min.self-6f2f4ae8073eeed25f7f4c1fe221c20b00fe8aea594a38fa55e240d6d6a2e51d.css?body=1" for ::1 at 2016-03-22 12:23:57 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-22 12:23:57 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-22 12:23:57 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-22 12:23:57 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.self-66fe84b79c6d5db31355296a8c9627d232721fe3ac3c31f3554ccc7e999279b6.css?body=1" for ::1 at 2016-03-22 12:23:57 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 12:23:57 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for ::1 at 2016-03-22 12:23:57 -0500
+
+
+Started GET "/assets/sessions_error_feedback.self-82eeb7a4632e03222a31d5dfa314245fbfe4f9de99f01a0fe5005c5999867c09.js?body=1" for ::1 at 2016-03-22 12:23:57 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 12:23:57 -0500
+
+
+Started GET "/assets/_assets/bootstrap-theme.min.css.map" for ::1 at 2016-03-22 12:23:57 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.css.map" for ::1 at 2016-03-22 12:23:57 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-03-22 12:26:23 -0500
+Processing by UsersController#new as HTML
+  Rendered shared/_errors_display.html.erb (0.0ms)
+  Rendered users/_user_form.html.erb (1.8ms)
+  Rendered users/new.html.erb within layouts/application (4.0ms)
+  Rendered shared/_navbar.html.erb (0.1ms)
+Completed 200 OK in 102ms (Views: 101.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/_assets/bootstrap-theme.min.self-6f2f4ae8073eeed25f7f4c1fe221c20b00fe8aea594a38fa55e240d6d6a2e51d.css?body=1" for ::1 at 2016-03-22 12:26:23 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-22 12:26:23 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.self-66fe84b79c6d5db31355296a8c9627d232721fe3ac3c31f3554ccc7e999279b6.css?body=1" for ::1 at 2016-03-22 12:26:23 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-22 12:26:23 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-22 12:26:23 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 12:26:23 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for ::1 at 2016-03-22 12:26:23 -0500
+
+
+Started GET "/assets/sessions_error_feedback.self-4fb5a969adb02474281bc72e7130010a82a17128cb6f494b6018fd34b863f76d.js?body=1" for ::1 at 2016-03-22 12:26:23 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 12:26:23 -0500
+
+
+Started GET "/assets/_assets/bootstrap-theme.min.css.map" for ::1 at 2016-03-22 12:26:23 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.css.map" for ::1 at 2016-03-22 12:26:23 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-03-22 12:26:45 -0500
+Processing by UsersController#new as HTML
+  Rendered shared/_errors_display.html.erb (0.0ms)
+  Rendered users/_user_form.html.erb (1.6ms)
+  Rendered users/new.html.erb within layouts/application (3.7ms)
+  Rendered shared/_navbar.html.erb (0.0ms)
+Completed 200 OK in 92ms (Views: 92.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/_assets/bootstrap-theme.min.self-6f2f4ae8073eeed25f7f4c1fe221c20b00fe8aea594a38fa55e240d6d6a2e51d.css?body=1" for ::1 at 2016-03-22 12:26:45 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-22 12:26:45 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.self-66fe84b79c6d5db31355296a8c9627d232721fe3ac3c31f3554ccc7e999279b6.css?body=1" for ::1 at 2016-03-22 12:26:45 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-22 12:26:45 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 12:26:45 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-22 12:26:45 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for ::1 at 2016-03-22 12:26:45 -0500
+
+
+Started GET "/assets/sessions_error_feedback.self-6426e7d4b215fd35a17b3b7d4024dffcc3803f68d1b0d375231656b6ea8455a5.js?body=1" for ::1 at 2016-03-22 12:26:45 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 12:26:45 -0500
+
+
+Started GET "/assets/_assets/bootstrap-theme.min.css.map" for ::1 at 2016-03-22 12:26:45 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.css.map" for ::1 at 2016-03-22 12:26:45 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-03-22 12:29:17 -0500
+Processing by UsersController#new as HTML
+  Rendered shared/_errors_display.html.erb (0.0ms)
+  Rendered users/_user_form.html.erb (1.1ms)
+  Rendered users/new.html.erb within layouts/application (2.9ms)
+  Rendered shared/_navbar.html.erb (0.0ms)
+Completed 200 OK in 82ms (Views: 81.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/_assets/bootstrap-theme.min.self-6f2f4ae8073eeed25f7f4c1fe221c20b00fe8aea594a38fa55e240d6d6a2e51d.css?body=1" for ::1 at 2016-03-22 12:29:17 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.self-66fe84b79c6d5db31355296a8c9627d232721fe3ac3c31f3554ccc7e999279b6.css?body=1" for ::1 at 2016-03-22 12:29:17 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-22 12:29:17 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-22 12:29:17 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for ::1 at 2016-03-22 12:29:17 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 12:29:17 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-22 12:29:17 -0500
+
+
+Started GET "/assets/sessions_error_feedback.self-6a54514eb30739de75a38ae0ed0e7d677e6d9037dae40ce7c72eaea7c30e3d2e.js?body=1" for ::1 at 2016-03-22 12:29:17 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 12:29:17 -0500
+
+
+Started GET "/assets/_assets/bootstrap-theme.min.css.map" for ::1 at 2016-03-22 12:29:17 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.css.map" for ::1 at 2016-03-22 12:29:17 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-03-22 12:30:11 -0500
+Processing by UsersController#new as HTML
+  Rendered shared/_errors_display.html.erb (0.0ms)
+  Rendered users/_user_form.html.erb (1.0ms)
+  Rendered users/new.html.erb within layouts/application (2.9ms)
+  Rendered shared/_navbar.html.erb (0.0ms)
+Completed 200 OK in 86ms (Views: 85.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/_assets/bootstrap-theme.min.self-6f2f4ae8073eeed25f7f4c1fe221c20b00fe8aea594a38fa55e240d6d6a2e51d.css?body=1" for ::1 at 2016-03-22 12:30:11 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.self-66fe84b79c6d5db31355296a8c9627d232721fe3ac3c31f3554ccc7e999279b6.css?body=1" for ::1 at 2016-03-22 12:30:11 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-22 12:30:11 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-22 12:30:11 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-22 12:30:11 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 12:30:11 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for ::1 at 2016-03-22 12:30:11 -0500
+
+
+Started GET "/assets/sessions_error_feedback.self-561159a3444ec0ba2a6bf4813d857d255bab3f205af475be799e2e5a7ff57bce.js?body=1" for ::1 at 2016-03-22 12:30:11 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 12:30:11 -0500
+
+
+Started GET "/assets/_assets/bootstrap-theme.min.css.map" for ::1 at 2016-03-22 12:30:11 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.css.map" for ::1 at 2016-03-22 12:30:11 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-03-22 12:31:21 -0500
+Processing by UsersController#new as HTML
+  Rendered shared/_errors_display.html.erb (0.0ms)
+  Rendered users/_user_form.html.erb (1.2ms)
+  Rendered users/new.html.erb within layouts/application (3.0ms)
+  Rendered shared/_navbar.html.erb (0.0ms)
+Completed 200 OK in 92ms (Views: 91.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/_assets/bootstrap-theme.min.self-6f2f4ae8073eeed25f7f4c1fe221c20b00fe8aea594a38fa55e240d6d6a2e51d.css?body=1" for ::1 at 2016-03-22 12:31:21 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-22 12:31:21 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.self-66fe84b79c6d5db31355296a8c9627d232721fe3ac3c31f3554ccc7e999279b6.css?body=1" for ::1 at 2016-03-22 12:31:21 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-22 12:31:21 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-22 12:31:21 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 12:31:21 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for ::1 at 2016-03-22 12:31:21 -0500
+
+
+Started GET "/assets/sessions_error_feedback.self-90387bfd3e1a48743c17bd3f4382e2340e271416922284e61c33de169fcd5416.js?body=1" for ::1 at 2016-03-22 12:31:21 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 12:31:21 -0500
+
+
+Started GET "/assets/_assets/bootstrap-theme.min.css.map" for ::1 at 2016-03-22 12:31:21 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.css.map" for ::1 at 2016-03-22 12:31:21 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-03-22 12:32:05 -0500
+Processing by UsersController#new as HTML
+  Rendered shared/_errors_display.html.erb (0.0ms)
+  Rendered users/_user_form.html.erb (1.4ms)
+  Rendered users/new.html.erb within layouts/application (3.3ms)
+  Rendered shared/_navbar.html.erb (0.0ms)
+Completed 200 OK in 90ms (Views: 89.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/_assets/bootstrap-theme.min.self-6f2f4ae8073eeed25f7f4c1fe221c20b00fe8aea594a38fa55e240d6d6a2e51d.css?body=1" for ::1 at 2016-03-22 12:32:05 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 12:32:05 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-22 12:32:05 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-22 12:32:05 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-22 12:32:05 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.self-66fe84b79c6d5db31355296a8c9627d232721fe3ac3c31f3554ccc7e999279b6.css?body=1" for ::1 at 2016-03-22 12:32:05 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for ::1 at 2016-03-22 12:32:05 -0500
+
+
+Started GET "/assets/sessions_error_feedback.self-ef0bd75ce2159872292fb5dfac006a0c22bf81b7d103fbc673cfa09a7f22fd94.js?body=1" for ::1 at 2016-03-22 12:32:05 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 12:32:05 -0500
+
+
+Started GET "/assets/_assets/bootstrap-theme.min.css.map" for ::1 at 2016-03-22 12:32:05 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.css.map" for ::1 at 2016-03-22 12:32:05 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-03-22 12:33:00 -0500
+Processing by UsersController#new as HTML
+  Rendered shared/_errors_display.html.erb (0.0ms)
+  Rendered users/_user_form.html.erb (1.3ms)
+  Rendered users/new.html.erb within layouts/application (3.1ms)
+  Rendered shared/_navbar.html.erb (0.0ms)
+Completed 200 OK in 89ms (Views: 88.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/_assets/bootstrap-theme.min.self-6f2f4ae8073eeed25f7f4c1fe221c20b00fe8aea594a38fa55e240d6d6a2e51d.css?body=1" for ::1 at 2016-03-22 12:33:00 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.self-66fe84b79c6d5db31355296a8c9627d232721fe3ac3c31f3554ccc7e999279b6.css?body=1" for ::1 at 2016-03-22 12:33:00 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-22 12:33:00 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-22 12:33:01 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 12:33:01 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-22 12:33:01 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for ::1 at 2016-03-22 12:33:01 -0500
+
+
+Started GET "/assets/sessions_error_feedback.self-f4eaae058b067c7f37239ab67fec2efc08e1ee7055d7b9068f0895935d7064ab.js?body=1" for ::1 at 2016-03-22 12:33:01 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 12:33:01 -0500
+
+
+Started GET "/assets/_assets/bootstrap-theme.min.css.map" for ::1 at 2016-03-22 12:33:01 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.css.map" for ::1 at 2016-03-22 12:33:01 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-03-22 12:33:51 -0500
+Processing by UsersController#new as HTML
+  Rendered shared/_errors_display.html.erb (0.0ms)
+  Rendered users/_user_form.html.erb (1.1ms)
+  Rendered users/new.html.erb within layouts/application (2.9ms)
+  Rendered shared/_navbar.html.erb (0.0ms)
+Completed 200 OK in 85ms (Views: 84.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/_assets/bootstrap-theme.min.self-6f2f4ae8073eeed25f7f4c1fe221c20b00fe8aea594a38fa55e240d6d6a2e51d.css?body=1" for ::1 at 2016-03-22 12:33:52 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.self-66fe84b79c6d5db31355296a8c9627d232721fe3ac3c31f3554ccc7e999279b6.css?body=1" for ::1 at 2016-03-22 12:33:52 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-22 12:33:52 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-22 12:33:52 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 12:33:52 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-22 12:33:52 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for ::1 at 2016-03-22 12:33:52 -0500
+
+
+Started GET "/assets/sessions_error_feedback.self-1a69290410e23dc0055d1a370a812dc06b6676b430f961ecfafd7b660a47d8d8.js?body=1" for ::1 at 2016-03-22 12:33:52 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 12:33:52 -0500
+
+
+Started GET "/assets/_assets/bootstrap-theme.min.css.map" for ::1 at 2016-03-22 12:33:52 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.css.map" for ::1 at 2016-03-22 12:33:52 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-03-22 12:34:41 -0500
+Processing by UsersController#new as HTML
+  Rendered shared/_errors_display.html.erb (0.0ms)
+  Rendered users/_user_form.html.erb (1.0ms)
+  Rendered users/new.html.erb within layouts/application (2.9ms)
+  Rendered shared/_navbar.html.erb (0.0ms)
+Completed 200 OK in 79ms (Views: 79.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/_assets/bootstrap-theme.min.self-6f2f4ae8073eeed25f7f4c1fe221c20b00fe8aea594a38fa55e240d6d6a2e51d.css?body=1" for ::1 at 2016-03-22 12:34:41 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-22 12:34:41 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.self-66fe84b79c6d5db31355296a8c9627d232721fe3ac3c31f3554ccc7e999279b6.css?body=1" for ::1 at 2016-03-22 12:34:41 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-22 12:34:41 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-22 12:34:41 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 12:34:41 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for ::1 at 2016-03-22 12:34:41 -0500
+
+
+Started GET "/assets/sessions_error_feedback.self-89a47c046b1691f24927401c807edc7ec63eafe68a6b9d238ca5d1d298e9ae1d.js?body=1" for ::1 at 2016-03-22 12:34:41 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 12:34:41 -0500
+
+
+Started GET "/assets/_assets/bootstrap-theme.min.css.map" for ::1 at 2016-03-22 12:34:41 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.css.map" for ::1 at 2016-03-22 12:34:41 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-03-22 12:35:47 -0500
+Processing by UsersController#new as HTML
+  Rendered shared/_errors_display.html.erb (0.0ms)
+  Rendered users/_user_form.html.erb (1.5ms)
+  Rendered users/new.html.erb within layouts/application (3.6ms)
+  Rendered shared/_navbar.html.erb (0.0ms)
+Completed 200 OK in 85ms (Views: 84.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/_assets/bootstrap-theme.min.self-6f2f4ae8073eeed25f7f4c1fe221c20b00fe8aea594a38fa55e240d6d6a2e51d.css?body=1" for ::1 at 2016-03-22 12:35:47 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-22 12:35:47 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.self-66fe84b79c6d5db31355296a8c9627d232721fe3ac3c31f3554ccc7e999279b6.css?body=1" for ::1 at 2016-03-22 12:35:47 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-22 12:35:47 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-22 12:35:47 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 12:35:47 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for ::1 at 2016-03-22 12:35:47 -0500
+
+
+Started GET "/assets/sessions_error_feedback.self-db36624a4cc02a6dc9f0d016cfb6534eb1632920a728e3c029aa7d5dabb1a57d.js?body=1" for ::1 at 2016-03-22 12:35:47 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 12:35:47 -0500
+
+
+Started GET "/assets/_assets/bootstrap-theme.min.css.map" for ::1 at 2016-03-22 12:35:47 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.css.map" for ::1 at 2016-03-22 12:35:47 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-03-22 12:36:02 -0500
+Processing by UsersController#new as HTML
+  Rendered shared/_errors_display.html.erb (0.0ms)
+  Rendered users/_user_form.html.erb (1.1ms)
+  Rendered users/new.html.erb within layouts/application (2.8ms)
+  Rendered shared/_navbar.html.erb (0.1ms)
+Completed 200 OK in 86ms (Views: 85.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/_assets/bootstrap-theme.min.self-6f2f4ae8073eeed25f7f4c1fe221c20b00fe8aea594a38fa55e240d6d6a2e51d.css?body=1" for ::1 at 2016-03-22 12:36:02 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.self-66fe84b79c6d5db31355296a8c9627d232721fe3ac3c31f3554ccc7e999279b6.css?body=1" for ::1 at 2016-03-22 12:36:02 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-22 12:36:02 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-22 12:36:02 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-22 12:36:02 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 12:36:02 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for ::1 at 2016-03-22 12:36:02 -0500
+
+
+Started GET "/assets/sessions_error_feedback.self-2ad27d6d19aae25a20922877ad1a8068c53c48218da126d84d16ac3874c4483d.js?body=1" for ::1 at 2016-03-22 12:36:02 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 12:36:02 -0500
+
+
+Started GET "/assets/_assets/bootstrap-theme.min.css.map" for ::1 at 2016-03-22 12:36:02 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.css.map" for ::1 at 2016-03-22 12:36:02 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-03-22 12:36:47 -0500
+Processing by UsersController#new as HTML
+  Rendered shared/_errors_display.html.erb (0.0ms)
+  Rendered users/_user_form.html.erb (1.1ms)
+  Rendered users/new.html.erb within layouts/application (3.0ms)
+  Rendered shared/_navbar.html.erb (0.1ms)
+Completed 200 OK in 90ms (Views: 89.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/_assets/bootstrap-theme.min.self-6f2f4ae8073eeed25f7f4c1fe221c20b00fe8aea594a38fa55e240d6d6a2e51d.css?body=1" for ::1 at 2016-03-22 12:36:47 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.self-66fe84b79c6d5db31355296a8c9627d232721fe3ac3c31f3554ccc7e999279b6.css?body=1" for ::1 at 2016-03-22 12:36:47 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-22 12:36:47 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-22 12:36:47 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-22 12:36:47 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 12:36:47 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for ::1 at 2016-03-22 12:36:47 -0500
+
+
+Started GET "/assets/sessions_error_feedback.self-765d2997964e99b784dfd3e7396cc5667fa62a4c787f83a2a87d2aede77f3fa2.js?body=1" for ::1 at 2016-03-22 12:36:47 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 12:36:47 -0500
+
+
+Started GET "/assets/_assets/bootstrap-theme.min.css.map" for ::1 at 2016-03-22 12:36:47 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.css.map" for ::1 at 2016-03-22 12:36:47 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-03-22 12:37:01 -0500
+Processing by UsersController#new as HTML
+  Rendered shared/_errors_display.html.erb (0.0ms)
+  Rendered users/_user_form.html.erb (1.9ms)
+  Rendered users/new.html.erb within layouts/application (4.3ms)
+  Rendered shared/_navbar.html.erb (0.0ms)
+Completed 200 OK in 28ms (Views: 27.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/_assets/bootstrap-theme.min.self-6f2f4ae8073eeed25f7f4c1fe221c20b00fe8aea594a38fa55e240d6d6a2e51d.css?body=1" for ::1 at 2016-03-22 12:37:01 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 12:37:01 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.self-66fe84b79c6d5db31355296a8c9627d232721fe3ac3c31f3554ccc7e999279b6.css?body=1" for ::1 at 2016-03-22 12:37:01 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-22 12:37:01 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-22 12:37:01 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-22 12:37:01 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for ::1 at 2016-03-22 12:37:01 -0500
+
+
+Started GET "/assets/sessions_error_feedback.self-765d2997964e99b784dfd3e7396cc5667fa62a4c787f83a2a87d2aede77f3fa2.js?body=1" for ::1 at 2016-03-22 12:37:01 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 12:37:01 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.css.map" for ::1 at 2016-03-22 12:37:01 -0500
+
+
+Started GET "/assets/_assets/bootstrap-theme.min.css.map" for ::1 at 2016-03-22 12:37:01 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-03-22 12:37:09 -0500
+Processing by UsersController#new as HTML
+  Rendered shared/_errors_display.html.erb (0.0ms)
+  Rendered users/_user_form.html.erb (1.4ms)
+  Rendered users/new.html.erb within layouts/application (3.6ms)
+  Rendered shared/_navbar.html.erb (0.0ms)
+Completed 200 OK in 22ms (Views: 21.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/_assets/bootstrap-theme.min.self-6f2f4ae8073eeed25f7f4c1fe221c20b00fe8aea594a38fa55e240d6d6a2e51d.css?body=1" for ::1 at 2016-03-22 12:37:10 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-22 12:37:10 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.self-66fe84b79c6d5db31355296a8c9627d232721fe3ac3c31f3554ccc7e999279b6.css?body=1" for ::1 at 2016-03-22 12:37:10 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-22 12:37:10 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-22 12:37:10 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 12:37:10 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for ::1 at 2016-03-22 12:37:10 -0500
+
+
+Started GET "/assets/sessions_error_feedback.self-765d2997964e99b784dfd3e7396cc5667fa62a4c787f83a2a87d2aede77f3fa2.js?body=1" for ::1 at 2016-03-22 12:37:10 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 12:37:10 -0500
+
+
+Started GET "/assets/_assets/bootstrap-theme.min.css.map" for ::1 at 2016-03-22 12:37:10 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.css.map" for ::1 at 2016-03-22 12:37:10 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-03-22 12:37:23 -0500
+Processing by UsersController#new as HTML
+  Rendered shared/_errors_display.html.erb (0.0ms)
+  Rendered users/_user_form.html.erb (2.1ms)
+  Rendered users/new.html.erb within layouts/application (4.2ms)
+  Rendered shared/_navbar.html.erb (0.0ms)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/_assets/bootstrap-theme.min.self-6f2f4ae8073eeed25f7f4c1fe221c20b00fe8aea594a38fa55e240d6d6a2e51d.css?body=1" for ::1 at 2016-03-22 12:37:23 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.self-66fe84b79c6d5db31355296a8c9627d232721fe3ac3c31f3554ccc7e999279b6.css?body=1" for ::1 at 2016-03-22 12:37:23 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-22 12:37:23 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 12:37:23 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-22 12:37:23 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for ::1 at 2016-03-22 12:37:23 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-22 12:37:23 -0500
+
+
+Started GET "/assets/sessions_error_feedback.self-765d2997964e99b784dfd3e7396cc5667fa62a4c787f83a2a87d2aede77f3fa2.js?body=1" for ::1 at 2016-03-22 12:37:23 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 12:37:23 -0500
+
+
+Started GET "/assets/_assets/bootstrap-theme.min.css.map" for ::1 at 2016-03-22 12:37:23 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.css.map" for ::1 at 2016-03-22 12:37:23 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-03-22 12:38:11 -0500
+Processing by UsersController#new as HTML
+  Rendered shared/_errors_display.html.erb (0.0ms)
+  Rendered users/_user_form.html.erb (1.4ms)
+  Rendered users/new.html.erb within layouts/application (3.5ms)
+  Rendered shared/_navbar.html.erb (0.1ms)
+Completed 200 OK in 104ms (Views: 103.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/_assets/bootstrap-theme.min.self-6f2f4ae8073eeed25f7f4c1fe221c20b00fe8aea594a38fa55e240d6d6a2e51d.css?body=1" for ::1 at 2016-03-22 12:38:11 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.self-66fe84b79c6d5db31355296a8c9627d232721fe3ac3c31f3554ccc7e999279b6.css?body=1" for ::1 at 2016-03-22 12:38:11 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 12:38:11 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-22 12:38:11 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-22 12:38:11 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-22 12:38:11 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for ::1 at 2016-03-22 12:38:11 -0500
+
+
+Started GET "/assets/sessions_error_feedback.self-1ff764b5e668fdfca66c70eedef19b271306da36a01563c0da750508abfb3aab.js?body=1" for ::1 at 2016-03-22 12:38:11 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 12:38:11 -0500
+
+
+Started GET "/assets/_assets/bootstrap-theme.min.css.map" for ::1 at 2016-03-22 12:38:11 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.css.map" for ::1 at 2016-03-22 12:38:11 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-03-22 12:38:24 -0500
+Processing by UsersController#new as HTML
+  Rendered shared/_errors_display.html.erb (0.0ms)
+  Rendered users/_user_form.html.erb (1.3ms)
+  Rendered users/new.html.erb within layouts/application (3.4ms)
+  Rendered shared/_navbar.html.erb (0.0ms)
+Completed 200 OK in 93ms (Views: 92.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/_assets/bootstrap-theme.min.self-6f2f4ae8073eeed25f7f4c1fe221c20b00fe8aea594a38fa55e240d6d6a2e51d.css?body=1" for ::1 at 2016-03-22 12:38:24 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.self-66fe84b79c6d5db31355296a8c9627d232721fe3ac3c31f3554ccc7e999279b6.css?body=1" for ::1 at 2016-03-22 12:38:24 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-22 12:38:24 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 12:38:24 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-22 12:38:24 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-22 12:38:24 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for ::1 at 2016-03-22 12:38:24 -0500
+
+
+Started GET "/assets/sessions_error_feedback.self-e8a22ab1a398193f075c65a436ea755b48a7ab452a9e6ccb099379d54fd9ded3.js?body=1" for ::1 at 2016-03-22 12:38:24 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 12:38:24 -0500
+
+
+Started GET "/assets/_assets/bootstrap-theme.min.css.map" for ::1 at 2016-03-22 12:38:24 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.css.map" for ::1 at 2016-03-22 12:38:24 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-03-22 12:46:50 -0500
+Processing by UsersController#new as HTML
+  Rendered shared/_errors_display.html.erb (0.0ms)
+  Rendered users/_user_form.html.erb (1.1ms)
+  Rendered users/new.html.erb within layouts/application (2.9ms)
+  Rendered shared/_navbar.html.erb (0.1ms)
+Completed 200 OK in 84ms (Views: 83.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/_assets/bootstrap-theme.min.self-6f2f4ae8073eeed25f7f4c1fe221c20b00fe8aea594a38fa55e240d6d6a2e51d.css?body=1" for ::1 at 2016-03-22 12:46:50 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.self-66fe84b79c6d5db31355296a8c9627d232721fe3ac3c31f3554ccc7e999279b6.css?body=1" for ::1 at 2016-03-22 12:46:50 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-22 12:46:50 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-22 12:46:50 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-22 12:46:50 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for ::1 at 2016-03-22 12:46:50 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 12:46:50 -0500
+
+
+Started GET "/assets/sessions_error_feedback.self-11b003f43f76975b2d47d8b60e5fab6ac975d3116b3ec18835e944bc767c2099.js?body=1" for ::1 at 2016-03-22 12:46:50 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 12:46:50 -0500
+
+
+Started GET "/assets/_assets/bootstrap-theme.min.css.map" for ::1 at 2016-03-22 12:46:50 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.css.map" for ::1 at 2016-03-22 12:46:50 -0500
+
+
+Started POST "/users" for ::1 at 2016-03-22 12:47:03 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ty+43UZ+pWUpziZXamrEyF18KlqZFjWAUzyff3O2gSKCWjakBy9gwEBxScqkcPkPOqpfQu3oldRaq7PLT2xEvg==", "user"=>{"username"=>"", "password"=>"[FILTERED]", "password_confirm"=>"[FILTERED]"}, "commit"=>"Login"}
+Unpermitted parameter: password_confirm
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "users" ("username", "password_hash", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", ""], ["password_hash", "$2a$10$Jfk0cL1F5eWKqngxWKJmmeNvExBeqr7Wf7IdNCuIhi4c/QOS5ygsC"], ["created_at", "2016-03-22 17:47:03.388243"], ["updated_at", "2016-03-22 17:47:03.388243"]]
+  [1m[35m (66.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/6
+Completed 302 Found in 148ms (ActiveRecord: 68.3ms)
+
+
+Started GET "/users/6" for ::1 at 2016-03-22 12:47:03 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mUser Load (2.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."followed_id" WHERE "followings"."follower_id" = $1  [["follower_id", 6]]
+  [1m[36mPost Load (3.3ms)[0m  [1mSELECT "posts".* FROM "posts" INNER JOIN "posts_users" ON "posts"."id" = "posts_users"."post_id" WHERE "posts_users"."user_id" = $1[0m  [["user_id", 6]]
+  Rendered users/show.html.erb within layouts/application (0.4ms)
+  Rendered shared/_navbar.html.erb (0.0ms)
+Completed 200 OK in 150ms (Views: 18.9ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/assets/_assets/bootstrap-theme.min.self-6f2f4ae8073eeed25f7f4c1fe221c20b00fe8aea594a38fa55e240d6d6a2e51d.css?body=1" for ::1 at 2016-03-22 12:47:03 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.self-66fe84b79c6d5db31355296a8c9627d232721fe3ac3c31f3554ccc7e999279b6.css?body=1" for ::1 at 2016-03-22 12:47:03 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-22 12:47:03 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-22 12:47:03 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-22 12:47:03 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-22 12:47:03 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for ::1 at 2016-03-22 12:47:03 -0500
+
+
+Started GET "/assets/sessions_error_feedback.self-11b003f43f76975b2d47d8b60e5fab6ac975d3116b3ec18835e944bc767c2099.js?body=1" for ::1 at 2016-03-22 12:47:03 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-22 12:47:03 -0500
+
+
+Started GET "/assets/_assets/bootstrap-theme.min.css.map" for ::1 at 2016-03-22 12:47:03 -0500
+
+
+Started GET "/assets/_assets/bootstrap.min.css.map" for ::1 at 2016-03-22 12:47:03 -0500
