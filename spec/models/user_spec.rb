@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
 
   let(:subject) { build(:user) }
+  let(:following_subject) { FactoryGirl.create(:following_user) }
 
   describe "test suit" do
     it "has a valid factory" do
@@ -25,15 +26,21 @@ RSpec.describe User, type: :model do
     end 
   end
 
-  # describe "through associations" do
-  #   it "has many followers" do
-  #     expect(followed_subject.followers.first).to eq(user)
-  #   end
+  describe "through associations" do
+    it "has many followers" do
+      subject = create(:user)
+      follower = create(:wonderwoman)
+      subject.followers << follower
+      expect(subject.followers.first).to eq(follower)
+    end
 
-  #   it "has many followed" do
-  #     expect(following_subject.followed.first).to eq(user)
-  #   end
-  # end
+    it "has many followed" do
+      subject  = create(:user)
+      leader   = create(:wonderwoman)
+      subject.followed << leader
+      expect(subject.followed.first).to eq(leader)
+    end
+  end
 
   describe "password" do
     it "encrypts password in db" do
