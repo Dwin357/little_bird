@@ -13,5 +13,9 @@ Post.destroy_all if Post.any?
 Following.destroy_all if Following.any?
 
 5.times do |i|
-  User.create!(username:"user #{i}", password: "pw #{i}")
+  u = User.create!(username:"user #{i}", password: "pw #{i}")
+  7.times do |ii|
+    p = Post.create!(author: u, post: "user #{i}'s #{ii}th post")
+    u.posts << p
+  end
 end

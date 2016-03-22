@@ -22,14 +22,14 @@ RSpec.describe UsersController, type: :controller do
         }.to change(User, :count).by(1)
       end
       it 'logs in new user' do
-        # this passed and it shouldn't have; should be User.last
+        # db only has 1 entry, so User.first also works
         post :create, user: FactoryGirl.attributes_for(:user)
-        expect(User.first).to eq(current_user!)
+        expect(User.last).to eq(current_user!)
       end
       it 'redirects to user show page' do
-        # this passed and it shouldn't have; should be User.last
+        # db only has 1 entry, so User.first also works
         post :create, user: FactoryGirl.attributes_for(:user)
-        expect(response).to redirect_to(user_path(User.first))
+        expect(response).to redirect_to(user_path(User.last))
       end
     end
   end 

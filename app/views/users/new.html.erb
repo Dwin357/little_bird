@@ -7,6 +7,8 @@
     </div>
     <%= render partial: "shared/errors_display", locals: {errors: flash[:errors]} %>
     <%=render partial: "user_form", locals: {user: @user} %>
+    <p>Already a user?  Sign in <%= link_to("here",new_session_path) %>.</p>
+
   </div>
   <div class='col-xs-1 right-margin'>
   </div>

@@ -34,7 +34,7 @@ class User < ActiveRecord::Base
   end
 
   def stream_posts
-    self.followed.unshift(self).map(&:posts)
+    self.followed.unshift(self).map(&:posts).flatten
   end
 
 end
