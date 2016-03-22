@@ -8,6 +8,7 @@ class UsersController < ApplicationController
   end
 
   def edit
+    @user = current_user!
   end
 
   def create
@@ -16,12 +17,24 @@ class UsersController < ApplicationController
       login(@user)
       redirect_to user_path(@user)
     else
-      @errors = @user.errors.full_messages
+      flash[:errors] = @user.errors.full_messages
       render "new"
     end
   end
 
   def update
+    if valid_edit?
+      @user = user_from_params.assign_attributes(user_params)
+      if @user.save
+        redirect_to user_path(@user)
+      else
+        flash[:errors] = @user.errors.full_messages
+        render "edit"
+      end
+    else
+      flash[:errors] = ["invalid edit permission"]
+      render "edit"
+    end
   end
 
   def destroy
@@ -33,6 +46,10 @@ class UsersController < ApplicationController
   end
 
   def user_from_params
-    User.find_by_id(params[:id])
+    @user ||= User.find_by_id(params[:id])
+  end
+
+  def valid_edit?
+    user_from_params && current_user == user_from_params
   end
 end
