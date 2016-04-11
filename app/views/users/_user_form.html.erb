@@ -1,0 +1,22 @@
+<%= form_for(user) do |f| %>
+  <div class='form-group'>
+      <%= f.label :username %>
+    <% if session %>
+      <%= f.text_field :username, placeholder: "AwesomeSauce" %>
+    <% else %>
+      <%= f.text_field :username, placeholder: "AwesomeSauce" %>
+    <% end %>
+  </div>
+  <div class='form-group'>
+    <%= f.label :password %>
+    <%= f.password_field :password, placeholder: "Pa$$word" %>
+  </div>
+  <div class='form-group'>
+    <%= f.label :password_confirm %>
+    <%= f.password_field :password_confirm, placeholder: "Pa$$word" %>
+  </div>
+  <div id="password-feedback">filler text</div>
+  <div class='form-group'>
+    <%= f.submit "Login" %>
+  </div>
+<% end %>

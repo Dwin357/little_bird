@@ -1,0 +1,16 @@
+<div class='row'>
+  <div class='col-xs-4 pic-container'>
+  </div>
+  <div class='col-xs-8 text-container'>
+    <em>
+      <%= "by #{post.author.username} " %>
+      <span class='small'><%= "on #{post.created_at.to_s('%B %d, %Y')}"%></span>
+    </em>
+    <p><%= post.post %></p>
+    <p class='small'>
+      <% post.tags.each do |tag| %>
+        <%= render partial: "tags/display", locals: {tag: tag} %>
+      <% end %>
+    </p>
+  </div>
+</div>

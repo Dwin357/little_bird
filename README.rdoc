@@ -44,3 +44,4 @@ As a user I can add tags to a post by including "#tags" in the text
 As a user I can search for posts
 
 As a user I can search for users
+>>>>>>> b164452b2506b78a3ea679a4951f21e6ce993232

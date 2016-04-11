@@ -1,0 +1,11 @@
+<div class='row'>
+  <div class='col-xs-3 left-margin'>
+  </div>
+  <div class='col-xs-6'>
+    <%@posts.each do |post| %>
+      <%= render partial: "posts/display", locals: {post: post} %>
+    <% end %>
+  </div>
+  <div class='col-xs-3 right-margin'>
+  </div>
+</div>
