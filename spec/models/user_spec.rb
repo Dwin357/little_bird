@@ -2,9 +2,16 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
 
-  let(:subject) { User.create(username:"Batman", password:"joker")}
+  let(:subject) { build(:user) }
+  let(:following_subject) { FactoryGirl.create(:following_user) }
 
-  describe "associations" do
+  describe "test suit" do
+    it "has a valid factory" do
+      expect(FactoryGirl.create(:user)).to be_valid
+    end
+  end
+
+  describe "direct associations" do
     it "has many authored posts" do
       t = User.reflect_on_association(:authored_posts)
       expect(t.macro).to eq(:has_many)
@@ -17,6 +24,22 @@ RSpec.describe User, type: :model do
       t = User.reflect_on_association(:posts)
       expect(t.macro).to eq(:has_and_belongs_to_many)
     end 
+  end
+
+  describe "through associations" do
+    it "has many followers" do
+      subject = create(:user)
+      follower = create(:wonderwoman)
+      subject.followers << follower
+      expect(subject.followers.first).to eq(follower)
+    end
+
+    it "has many followed" do
+      subject  = create(:user)
+      leader   = create(:wonderwoman)
+      subject.followed << leader
+      expect(subject.followed.first).to eq(leader)
+    end
   end
 
   describe "password" do
