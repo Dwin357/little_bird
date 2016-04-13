@@ -113,27 +113,27 @@ Migrating to AddUpdateStatsToUser (20160306032136)
   [1m[35m (7.7ms)[0m  COMMIT
 Migrating to CreatePosts (20160306032706)
   [1m[36m (0.7ms)[0m  [1mBEGIN[0m
-  [1m[35m (104.9ms)[0m  CREATE TABLE "posts" ("id" serial primary key, "author_id" integer, "post" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[35m (104.9ms)[0m  CREATE TABLE "posts" ("id" serial primary key, "author_id" integer, "post" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)
   [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032706"]]
   [1m[35m (23.6ms)[0m  COMMIT
 Migrating to CreatePostings (20160306032743)
   [1m[36m (1.0ms)[0m  [1mBEGIN[0m
-  [1m[35m (57.0ms)[0m  CREATE TABLE "postings" ("id" serial primary key, "poster_id" integer, "post_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[35m (57.0ms)[0m  CREATE TABLE "postings" ("id" serial primary key, "poster_id" integer, "post_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)
   [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032743"]]
   [1m[35m (26.2ms)[0m  COMMIT
 Migrating to CreateLikes (20160306032818)
   [1m[36m (0.7ms)[0m  [1mBEGIN[0m
-  [1m[35m (60.7ms)[0m  CREATE TABLE "likes" ("id" serial primary key, "liked_id" integer, "liker_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[35m (60.7ms)[0m  CREATE TABLE "likes" ("id" serial primary key, "liked_id" integer, "liker_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)
   [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032818"]]
   [1m[35m (16.8ms)[0m  COMMIT
 Migrating to CreateTags (20160306032907)
   [1m[36m (0.6ms)[0m  [1mBEGIN[0m
-  [1m[35m (129.9ms)[0m  CREATE TABLE "tags" ("id" serial primary key, "tag" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[35m (129.9ms)[0m  CREATE TABLE "tags" ("id" serial primary key, "tag" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)
   [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032907"]]
   [1m[35m (18.5ms)[0m  COMMIT
 Migrating to CreateTaggings (20160306032925)
   [1m[36m (1.3ms)[0m  [1mBEGIN[0m
-  [1m[35m (67.0ms)[0m  CREATE TABLE "taggings" ("id" serial primary key, "tag_id" integer, "tagged_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[35m (67.0ms)[0m  CREATE TABLE "taggings" ("id" serial primary key, "tag_id" integer, "tagged_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)
   [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032925"]]
   [1m[35m (21.4ms)[0m  COMMIT
   [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
@@ -246,7 +246,7 @@ Migrating to AddUpdateStatsToUser (20160306032136)
   [1m[35m (14.4ms)[0m  COMMIT
 Migrating to CreatePosts (20160306032706)
   [1m[36m (0.8ms)[0m  [1mBEGIN[0m
-  [1m[35m (128.2ms)[0m  CREATE TABLE "posts" ("id" serial primary key, "author_id" integer, "post" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[35m (128.2ms)[0m  CREATE TABLE "posts" ("id" serial primary key, "author_id" integer, "post" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)
   [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032706"]]
   [1m[35m (17.7ms)[0m  COMMIT
 Migrating to CreatePostings (20160306032743)
@@ -266,29 +266,29 @@ Migrating to AddUpdateStatsToUser (20160306032136)
   [1m[35m (9.1ms)[0m  COMMIT
 Migrating to CreatePosts (20160306032706)
   [1m[36m (0.5ms)[0m  [1mBEGIN[0m
-  [1m[35m (96.3ms)[0m  CREATE TABLE "posts" ("id" serial primary key, "author_id" integer, "post" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[35m (96.3ms)[0m  CREATE TABLE "posts" ("id" serial primary key, "author_id" integer, "post" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)
   [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032706"]]
   [1m[35m (17.0ms)[0m  COMMIT
 Migrating to CreatePostsUsersJoinTable (20160306032743)
   [1m[36m (0.8ms)[0m  [1mBEGIN[0m
-  [1m[35m (50.3ms)[0m  CREATE TABLE "users_posts" ("id" serial primary key, "user_id" integer, "post_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[35m (50.3ms)[0m  CREATE TABLE "users_posts" ("id" serial primary key, "user_id" integer, "post_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)
   [1m[36m (59.1ms)[0m  [1mCREATE  INDEX  "index_users_posts_on_user_id" ON "users_posts"  ("user_id")[0m
   [1m[35m (49.1ms)[0m  CREATE  INDEX  "index_users_posts_on_post_id" ON "users_posts"  ("post_id")
   [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032743"]]
   [1m[35m (17.0ms)[0m  COMMIT
 Migrating to CreateLikes (20160306032818)
   [1m[36m (0.5ms)[0m  [1mBEGIN[0m
-  [1m[35m (53.2ms)[0m  CREATE TABLE "likes" ("id" serial primary key, "liked_id" integer, "liker_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[35m (53.2ms)[0m  CREATE TABLE "likes" ("id" serial primary key, "liked_id" integer, "liker_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)
   [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032818"]]
   [1m[35m (16.2ms)[0m  COMMIT
 Migrating to CreateTags (20160306032907)
   [1m[36m (0.6ms)[0m  [1mBEGIN[0m
-  [1m[35m (119.4ms)[0m  CREATE TABLE "tags" ("id" serial primary key, "tag" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[35m (119.4ms)[0m  CREATE TABLE "tags" ("id" serial primary key, "tag" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)
   [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032907"]]
   [1m[35m (32.8ms)[0m  COMMIT
 Migrating to CreateTaggings (20160306032925)
   [1m[36m (1.1ms)[0m  [1mBEGIN[0m
-  [1m[35m (83.4ms)[0m  CREATE TABLE "taggings" ("id" serial primary key, "tag_id" integer, "tagged_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[35m (83.4ms)[0m  CREATE TABLE "taggings" ("id" serial primary key, "tag_id" integer, "tagged_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)
   [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032925"]]
   [1m[35m (11.9ms)[0m  COMMIT
   [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
@@ -380,29 +380,29 @@ Migrating to AddUpdateStatsToUser (20160306032136)
   [1m[35m (15.0ms)[0m  COMMIT
 Migrating to CreatePosts (20160306032706)
   [1m[36m (0.7ms)[0m  [1mBEGIN[0m
-  [1m[35m (104.3ms)[0m  CREATE TABLE "posts" ("id" serial primary key, "author_id" integer, "post" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[35m (104.3ms)[0m  CREATE TABLE "posts" ("id" serial primary key, "author_id" integer, "post" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)
   [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032706"]]
   [1m[35m (23.7ms)[0m  COMMIT
 Migrating to CreatePostsUsersJoinTable (20160306032743)
   [1m[36m (0.6ms)[0m  [1mBEGIN[0m
-  [1m[35m (74.5ms)[0m  CREATE TABLE "users_posts" ("id" serial primary key, "user_id" integer, "post_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[35m (74.5ms)[0m  CREATE TABLE "users_posts" ("id" serial primary key, "user_id" integer, "post_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)
   [1m[36m (50.4ms)[0m  [1mCREATE  INDEX  "index_users_posts_on_user_id" ON "users_posts"  ("user_id")[0m
   [1m[35m (46.3ms)[0m  CREATE  INDEX  "index_users_posts_on_post_id" ON "users_posts"  ("post_id")
   [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032743"]]
   [1m[35m (20.4ms)[0m  COMMIT
 Migrating to CreateLikes (20160306032818)
   [1m[36m (0.7ms)[0m  [1mBEGIN[0m
-  [1m[35m (107.7ms)[0m  CREATE TABLE "likes" ("id" serial primary key, "liked_id" integer, "liker_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[35m (107.7ms)[0m  CREATE TABLE "likes" ("id" serial primary key, "liked_id" integer, "liker_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)
   [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032818"]]
   [1m[35m (9.1ms)[0m  COMMIT
 Migrating to CreateTags (20160306032907)
   [1m[36m (0.8ms)[0m  [1mBEGIN[0m
-  [1m[35m (109.1ms)[0m  CREATE TABLE "tags" ("id" serial primary key, "tag" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[35m (109.1ms)[0m  CREATE TABLE "tags" ("id" serial primary key, "tag" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)
   [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032907"]]
   [1m[35m (16.8ms)[0m  COMMIT
 Migrating to CreateTagsPostsJoinTable (20160306032925)
   [1m[36m (1.3ms)[0m  [1mBEGIN[0m
-  [1m[35m (126.2ms)[0m  CREATE TABLE "tags_posts" ("id" serial primary key, "tag_id" integer, "post_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[35m (126.2ms)[0m  CREATE TABLE "tags_posts" ("id" serial primary key, "tag_id" integer, "post_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)
   [1m[36m (50.6ms)[0m  [1mCREATE  INDEX  "index_tags_posts_on_tag_id" ON "tags_posts"  ("tag_id")[0m
   [1m[35m (51.4ms)[0m  CREATE  INDEX  "index_tags_posts_on_post_id" ON "tags_posts"  ("post_id")
   [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032925"]]
@@ -512,29 +512,29 @@ Migrating to AddUpdateStatsToUser (20160306032136)
   [1m[35m (8.7ms)[0m  COMMIT
 Migrating to CreatePosts (20160306032706)
   [1m[36m (0.5ms)[0m  [1mBEGIN[0m
-  [1m[35m (99.7ms)[0m  CREATE TABLE "posts" ("id" serial primary key, "author_id" integer, "post" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[35m (99.7ms)[0m  CREATE TABLE "posts" ("id" serial primary key, "author_id" integer, "post" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)
   [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032706"]]
   [1m[35m (24.0ms)[0m  COMMIT
 Migrating to CreatePostsUsersJoinTable (20160306032743)
   [1m[36m (0.6ms)[0m  [1mBEGIN[0m
-  [1m[35m (73.5ms)[0m  CREATE TABLE "posts_users" ("id" serial primary key, "user_id" integer, "post_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[35m (73.5ms)[0m  CREATE TABLE "posts_users" ("id" serial primary key, "user_id" integer, "post_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)
   [1m[36m (53.5ms)[0m  [1mCREATE  INDEX  "index_posts_users_on_user_id" ON "posts_users"  ("user_id")[0m
   [1m[35m (38.4ms)[0m  CREATE  INDEX  "index_posts_users_on_post_id" ON "posts_users"  ("post_id")
   [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032743"]]
   [1m[35m (21.9ms)[0m  COMMIT
 Migrating to CreateLikes (20160306032818)
   [1m[36m (0.6ms)[0m  [1mBEGIN[0m
-  [1m[35m (46.8ms)[0m  CREATE TABLE "likes" ("id" serial primary key, "liked_id" integer, "liker_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[35m (46.8ms)[0m  CREATE TABLE "likes" ("id" serial primary key, "liked_id" integer, "liker_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)
   [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032818"]]
   [1m[35m (24.6ms)[0m  COMMIT
 Migrating to CreateTags (20160306032907)
   [1m[36m (0.8ms)[0m  [1mBEGIN[0m
-  [1m[35m (100.0ms)[0m  CREATE TABLE "tags" ("id" serial primary key, "tag" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[35m (100.0ms)[0m  CREATE TABLE "tags" ("id" serial primary key, "tag" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)
   [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032907"]]
   [1m[35m (23.9ms)[0m  COMMIT
 Migrating to CreateTagsPostsJoinTable (20160306032925)
   [1m[36m (0.7ms)[0m  [1mBEGIN[0m
-  [1m[35m (54.7ms)[0m  CREATE TABLE "tags_posts" ("id" serial primary key, "tag_id" integer, "post_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[35m (54.7ms)[0m  CREATE TABLE "tags_posts" ("id" serial primary key, "tag_id" integer, "post_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)
   [1m[36m (69.8ms)[0m  [1mCREATE  INDEX  "index_tags_posts_on_tag_id" ON "tags_posts"  ("tag_id")[0m
   [1m[35m (43.3ms)[0m  CREATE  INDEX  "index_tags_posts_on_post_id" ON "tags_posts"  ("post_id")
   [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032925"]]
@@ -633,36 +633,36 @@ Migrating to AddUpdateStatsToUser (20160306032136)
   [1m[35m (12.0ms)[0m  COMMIT
 Migrating to CreatePosts (20160306032706)
   [1m[36m (0.6ms)[0m  [1mBEGIN[0m
-  [1m[35m (136.1ms)[0m  CREATE TABLE "posts" ("id" serial primary key, "author_id" integer, "post" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[35m (136.1ms)[0m  CREATE TABLE "posts" ("id" serial primary key, "author_id" integer, "post" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)
   [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032706"]]
   [1m[35m (23.6ms)[0m  COMMIT
 Migrating to CreatePostsUsersJoinTable (20160306032743)
   [1m[36m (1.2ms)[0m  [1mBEGIN[0m
-  [1m[35m (66.6ms)[0m  CREATE TABLE "posts_users" ("id" serial primary key, "user_id" integer, "post_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[35m (66.6ms)[0m  CREATE TABLE "posts_users" ("id" serial primary key, "user_id" integer, "post_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)
   [1m[36m (48.5ms)[0m  [1mCREATE  INDEX  "index_posts_users_on_user_id" ON "posts_users"  ("user_id")[0m
   [1m[35m (44.8ms)[0m  CREATE  INDEX  "index_posts_users_on_post_id" ON "posts_users"  ("post_id")
   [1m[36mSQL (5.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032743"]]
   [1m[35m (22.0ms)[0m  COMMIT
 Migrating to CreateLikes (20160306032818)
   [1m[36m (0.7ms)[0m  [1mBEGIN[0m
-  [1m[35m (49.9ms)[0m  CREATE TABLE "likes" ("id" serial primary key, "liked_id" integer, "liker_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[35m (49.9ms)[0m  CREATE TABLE "likes" ("id" serial primary key, "liked_id" integer, "liker_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)
   [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032818"]]
   [1m[35m (16.2ms)[0m  COMMIT
 Migrating to CreateTags (20160306032907)
   [1m[36m (0.6ms)[0m  [1mBEGIN[0m
-  [1m[35m (95.5ms)[0m  CREATE TABLE "tags" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[35m (95.5ms)[0m  CREATE TABLE "tags" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)
   [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032907"]]
   [1m[35m (25.9ms)[0m  COMMIT
 Migrating to CreateTagsPostsJoinTable (20160306032925)
   [1m[36m (1.0ms)[0m  [1mBEGIN[0m
-  [1m[35m (61.6ms)[0m  CREATE TABLE "tags_posts" ("id" serial primary key, "tag_id" integer, "post_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[35m (61.6ms)[0m  CREATE TABLE "tags_posts" ("id" serial primary key, "tag_id" integer, "post_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)
   [1m[36m (49.3ms)[0m  [1mCREATE  INDEX  "index_tags_posts_on_tag_id" ON "tags_posts"  ("tag_id")[0m
   [1m[35m (51.3ms)[0m  CREATE  INDEX  "index_tags_posts_on_post_id" ON "tags_posts"  ("post_id")
   [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306032925"]]
   [1m[35m (19.1ms)[0m  COMMIT
 Migrating to CreateFollowings (20160306155114)
   [1m[36m (2.3ms)[0m  [1mBEGIN[0m
-  [1m[35m (65.6ms)[0m  CREATE TABLE "followings" ("id" serial primary key, "follower_id" integer, "followed_id" integer, "blocked" boolean DEFAULT 'f') 
+  [1m[35m (65.6ms)[0m  CREATE TABLE "followings" ("id" serial primary key, "follower_id" integer, "followed_id" integer, "blocked" boolean DEFAULT 'f')
   [1m[36m (42.0ms)[0m  [1mCREATE  INDEX  "index_followings_on_follower_id" ON "followings"  ("follower_id")[0m
   [1m[35m (38.2ms)[0m  CREATE  INDEX  "index_followings_on_followed_id" ON "followings"  ("followed_id")
   [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160306155114"]]
@@ -975,7 +975,7 @@ Completed 500 Internal Server Error in 98ms (ActiveRecord: 0.0ms)
 
 ActionView::Template::Error (undefined method `[]' for nil:NilClass):
     1: <%= form_for(:session) do |f| %>
-    2:   <div class='form-group'>  
+    2:   <div class='form-group'>
     3:     <%= f.label :username %>
     4:     <%= f.text_field :username, placeholder: "AwsomeSauce", value: session[:username] %>
     5:   </div>
@@ -3851,3 +3851,6 @@ Started GET "/assets/_assets/bootstrap-theme.min.css.map" for ::1 at 2016-03-22 
 
 
 Started GET "/assets/_assets/bootstrap.min.css.map" for ::1 at 2016-03-22 12:47:03 -0500
+
+
+Started GET "/" for ::1 at 2016-04-11 17:45:18 -0500
